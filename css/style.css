@@ -300,14 +300,15 @@ button {
     letter-spacing: 5px;
 }
 .navbar-dark {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,1);
     border: 1px solid rgba(0,0,0,0);
     z-index: 900;
     transition: 0.3s;
 }
 .scrolled {
-    background-color: rgba(0,0,0,0.8); /* navbar background gradient */
+    background-color: rgba(0,0,0,1); /* navbar background gradient */
     z-index: 900;
+    border-bottom: 1px solid #3AC1AC;
 }
 .nav-link {
     font-size: 1.125rem;
@@ -918,10 +919,10 @@ button {
     color: #3AC1AC;
     }
     .navbar-dark {
-        background-color: rgba(0,0,0,0.8);
+        background-color: rgba(0,0,0,1);
     }
     .scrolled {
-        background-color: rgba(0,0,0,0.8); /* navbar background gradient */
+        background-color: rgba(0,0,0,1); /* navbar background gradient */
     }
     #footer {
         text-align: center;
