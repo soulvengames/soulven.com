@@ -42,11 +42,17 @@ a (active):	#3AC1AC;
 Primary Color: #3AC1AC;
 -------------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500'); /* Raleway Font */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans'); /* Open Sans Font */
 @font-face {
-    font-family: 'Anurati';
-    src: url('../fonts/Anurati-Regular.otf');
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Regular.ttf');
+}
+@font-face {
+    font-family: 'Soulven Secondary';
+    src: url('../fonts/Yokelvision.otf');
+}
+@font-face {
+    font-family: 'Soulven Secondary';
+    src: url('../fonts/Marsek-Demi.ttf');
 }
 
 /* --------------------------- /////////// I. GENERAL /////////// --------------------------- */
@@ -57,7 +63,7 @@ Primary Color: #3AC1AC;
 /* -Link Styling- */
 a {
     color: #F39C12;
-    font-family: Raleway, sans-serif;
+    font-family: Soulven Secondary, sans-serif;
 	text-decoration: none;
 }
 a:visited {
@@ -94,11 +100,11 @@ html, body {
 }
 /* -Text Styling */
 h1,h2,h3,h4,h5,h6 {
-	font-family: Raleway, sans-serif;
+	font-family: Soulven Secondary, sans-serif;
 }
 h1 {
     font-size: 2.25rem; /* 36px */
-    font-family: Anurati, sans-serif;
+    font-family: Soulven Secondary, sans-serif;
     letter-spacing: 5px;
 } 
 h2 {
@@ -228,7 +234,7 @@ button {
     border: none;
     border-radius: 2px;
     color: #FFF;
-    font-family: Raleway, sans-serif;
+    font-family: Soulven Secondary, sans-serif;
     font-weight: 500;
 	display: block;
 	height: auto;
@@ -289,7 +295,7 @@ button {
 
 /* --------------------------- /////////// III. HEADER & NAVIGATION /////////// --------------------------- */
 #logo {
-    font-family: Anurati, sans-serif;
+    font-family: blackhound-headline, sans-serif;
     font-size: 1.75rem; /* 28px */;
     letter-spacing: 5px;
 }
@@ -405,7 +411,7 @@ button {
 .hero-caption h1 {
     font-weight: bold;
     font-size: 3rem;
-    font-family: Raleway, sans-serif;
+    font-family: Soulven Secondary, sans-serif;
 }
 
 /* --------------------------- /////////// V. ABOUT SECTION /////////// --------------------------- */
@@ -421,7 +427,7 @@ button {
 .game-tags li {
     display: inline;
     margin: 0 0 0 15px;
-    font-family: Raleway, sans-serif;
+    font-family: Soulven Secondary, sans-serif;
     font-size:1.10rem; /* 20px */;
     font-weight: 500;
 }
@@ -885,7 +891,7 @@ button {
      margin-top: 18%;
 }
 .text-404 h1 {
-    font-family: Anurati, sans-serif;
+    font-family: blackhound-headline, sans-serif;
     font-size: 4rem;
 }
 .text-404 a {
