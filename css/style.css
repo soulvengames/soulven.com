@@ -294,7 +294,7 @@ button {
     letter-spacing: 5px;
 }
 .navbar-dark {
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0,0,0,0.8);
     border: 1px solid rgba(0,0,0,0);
     z-index: 900;
     transition: 0.3s;
@@ -470,6 +470,7 @@ button {
     height: 100%;
     width: 100%;
     min-height: 270px;
+    object-fit: cover;
 }
 .game-card-right {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
@@ -672,7 +673,7 @@ button {
     height: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
     text-align: center; 
-    padding: 40% 20px 20px 20px;
+    padding: 15% 20px 20px 20px;
     z-index: 5;
     opacity: 0;
     transition: all 0.3s ease;
@@ -784,7 +785,7 @@ button {
     display: inline-block;
     height: 43px;
     width: auto;
-}
+}team-caption
 /* --------------------------- /////////// IX. CONTACT SECTION /////////// --------------------------- */
 #contactForm {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
@@ -911,7 +912,7 @@ button {
     color: #3AC1AC;
     }
     .navbar-dark {
-        background-color: rgba(0,0,0,0.4); /* navbar background gradient */
+        background-color: rgba(0,0,0,0.8);
     }
     .scrolled {
         background-color: rgba(0,0,0,0.8); /* navbar background gradient */
