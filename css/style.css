@@ -493,6 +493,23 @@ button {
 .tags {
     font-size: 14px;
     padding-top: 0;
+    display:inline-block;
+}
+.offline-status {
+    display: inline-block;
+    height: 15px;
+    border-radius: 20px;
+    background-color: red;
+    width: 15px;
+    vertical-align: middle;
+}
+.online-status {
+    display: inline-block;
+    height: 15px;
+    border-radius: 20px;
+    background-color: green;
+    width: 15px;
+    vertical-align: middle;
 }
 .game-description {
     margin: 35px 0;
