@@ -1004,6 +1004,10 @@ button {
     .text-404 h1 {
         font-size: 3.5rem;
     }
+
+    .navigation-soulvenicon {
+        width: 160px;
+    }
 }
 @media (max-width : 480px) {
     .game-card-left img {
