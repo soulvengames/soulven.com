@@ -1042,4 +1042,7 @@ button {
     .button-store:nth-of-type(2) {
         float: none;
     }
+    .game-tags > li:nth-child(1) {
+        display: block;
+    }
 }
