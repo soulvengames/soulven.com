@@ -186,8 +186,7 @@ hr {
     margin: 5px auto;
 }
 .short-hr-left::after {
-    border-top: 2px solid;
-    border-color: #3AC1AC;
+
     content: "";
     display: block;
     height: 1px;
@@ -508,6 +507,14 @@ button {
     height: 15px;
     border-radius: 20px;
     background-color: green;
+    width: 15px;
+    vertical-align: middle;
+}
+.demand-status {
+    display: inline-block;
+    height: 15px;
+    border-radius: 20px;
+    background-color: orange;
     width: 15px;
     vertical-align: middle;
 }
