@@ -518,6 +518,26 @@ button {
     width: 15px;
     vertical-align: middle;
 }
+
+.pi-contact {
+    color: white; 
+    text-decoration: none; 
+    vertical-align: middle;
+}
+
+a.pi-contact {
+    color: #3AC1AC;
+    text-decoration: none;
+}
+
+a.pi-contact:hover {
+    color: #FFF;
+}
+
+.pi-contact > p {
+    display: inline-block;
+}
+
 .game-description {
     margin: 35px 0;
 }
