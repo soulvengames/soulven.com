@@ -1054,6 +1054,11 @@ a.pi-contact:hover {
     }
 }
 @media (max-width : 480px) {
+
+    #about {
+        margin-top: 14em;
+    }
+
     .game-card-left img {
         min-height: 0;
     }
