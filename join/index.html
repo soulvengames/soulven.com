@@ -169,6 +169,42 @@
     $('[data-toggle="tooltip"]').tooltip()
   })
 </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Ziel-Link finden (Steam: My Dear Emma)
+  const steamLink = document.querySelector('a[href*="store.steampowered.com/app/2577080/My_Dear_Emma"]');
+  if (!steamLink) return;
+
+  const hrefNow = steamLink.getAttribute("href");
+  const pageUrl  = window.location.href;
+  const pageQS   = window.location.search.toLowerCase();
+  const pageHash = window.location.hash.toLowerCase();
+
+  // Schon vorhandene UTM am Link? -> Dann nichts tun (verhindert Doppelanhang)
+  if (/[?&]utm_source=/i.test(hrefNow)) return;
+
+  // Welche Kampagne?
+  let utm = "";
+  if (pageQS.includes("?utm_source=reddit")) {
+    utm = "utm_source=reddit&utm_medium=cpc&utm_campaign=website-join-reddit";
+  } else if (pageHash.includes("#meta")) {
+    utm = "utm_source=meta&utm_medium=cpc&utm_campaign=website-join-meta";
+  } else if (pageHash.includes("#google")) {
+    utm = "utm_source=google&utm_medium=cpc&utm_campaign=website-join-google";
+  } else if (pageHash.includes("#tiktok")) {
+    utm = "utm_source=tiktok&utm_medium=cpc&utm_campaign=website-join-tiktok";
+  }
+
+  if (!utm) return; // keine passende Bedingung -> nichts ändern
+
+  // Korrektes Trennzeichen wählen
+  const joiner = hrefNow.includes("?") ? "&" : "?";
+  steamLink.setAttribute("href", hrefNow + joiner + utm);
+});
+</script>
+
+
 </body>
 
 </html>
