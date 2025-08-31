@@ -5,7 +5,20 @@
     <meta charset="utf-8">
     <meta name="author" content="Soulven UG">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
-
+     
+    <!-- Consent Mode Grundzustand -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'functionality_storage': 'granted'
+        });
+    </script>
+    
     <!-- WEBSITE TITLE & DESCRIPTION -->
     <title>Soulven - We invent games and 3D solutions with soul</title>
     <meta name="description" content="We´re an independent 3D and Game Studio based in germany. Our mission is it to develop creative, innovative and interactive 3D experiences to unlock the users best experience.">
@@ -40,14 +53,7 @@
     <!-- Main Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-    <!-- Reddit Pixel -->
-    <script>
-    !function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','a2_hkotafoxb36z');rdt('track', 'PageVisit');
-    </script>
-    <!-- DO NOT MODIFY UNLESS TO REPLACE A USER IDENTIFIER -->
-    <!-- End Reddit Pixel -->
-  
-</head>
+    </head>
 <body>
     <!-- Loading Screen -->
     <div id="loader-wrapper">
@@ -620,5 +626,173 @@
     <script src="js/jquery-modal-video.min.js"></script>
     <script src="js/validator.min.js"></script>
     <script src="js/strider.js"></script>
+
+<!-- COOKIE CONSENTS (Banner + Consent Mode integration) -->
+<style>
+  .cookie-banner {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 9999;
+    background: #0f1221; color: #fff; padding: 16px;
+    box-shadow: 0 -8px 24px rgba(0,0,0,.35);
+    display: none; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: nowrap;
+  }
+  .cookie-banner p { margin: 0; line-height: 1.4; max-width: 720px; }
+  .cookie-actions { display: flex; gap: 15px;  margin-left: auto; }
+  .cookie-btn {
+    border: 0; padding: 10px 16px; cursor: pointer; border-radius: 8px; font-weight: 600;
+  }
+  .cookie-accept { background: #3fb950; color: #0b2412; }
+  .cookie-decline { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.3); }
+  .cookie-link { color: #8ab4ff; text-decoration: underline; }
+</style>
+
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie Consent">
+  <p>
+    We use cookies and tags (e.g., Google Tag Manager) to analyze traffic and improve marketing.
+    You can read more in our <a class="cookie-link" href="./privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.
+  </p>
+  <div class="cookie-actions">
+    <button id="cookie-accept" class="cookie-btn cookie-accept" aria-label="Accept all">Accept</button>
+    <button id="cookie-decline" class="cookie-btn cookie-decline" aria-label="Decline">Decline</button>
+  </div>
+</div>
+
+<script>
+  // === Config: Deine GTM-ID hier eintragen ===
+  const GTM_ID = "GTM-WWQHNJD9";
+
+  function loadGTM(id) {
+    console.log("[CookieConsent] Loading Google Tag Manager:", id);
+    // Initialize dataLayer if not existing
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+
+    const gtmScript = document.createElement('script');
+    gtmScript.async = true;
+    gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=' + encodeURIComponent(id);
+    document.head.appendChild(gtmScript);
+  }
+
+  function showBanner() {
+    const banner = document.getElementById('cookie-banner');
+    if (banner && getComputedStyle(banner).display === 'none') {
+      banner.style.display = 'flex';
+      console.log("[CookieConsent] Banner shown (no stored consent).");
+    }
+  }
+
+  function hideBanner() {
+    const banner = document.getElementById('cookie-banner');
+    if (banner) banner.style.display = 'none';
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const stored = localStorage.getItem('cookie_consent');
+
+    if (stored === 'granted') {
+      console.log("[CookieConsent] Stored consent found → updating consent mode & loading GTM.");
+      // Consent Mode granted
+      gtag('consent', 'update', {
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+        'analytics_storage': 'granted'
+      });
+      loadGTM(GTM_ID);
+    } else {
+      console.log("[CookieConsent] No stored consent → showing banner.");
+      showBanner();
+    }
+
+    document.getElementById('cookie-accept')?.addEventListener('click', function () {
+      localStorage.setItem('cookie_consent', 'granted');
+      hideBanner();
+      console.log("[CookieConsent] User accepted → updating consent mode & loading GTM.");
+      gtag('consent', 'update', {
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+        'analytics_storage': 'granted'
+      });
+      loadGTM(GTM_ID);
+    });
+
+    document.getElementById('cookie-decline')?.addEventListener('click', function () {
+      hideBanner();
+      console.log("[CookieConsent] User declined → consent stays denied.");
+      gtag('consent', 'update', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied'
+      });
+      // Do NOT save decline → user will be asked again on next visit or reload
+    });
+  });
+</script>
+<!-- END COOKIE CONSENTS -->
+
+<!-- COOKIE Banner & FOOTER OVERLAP FIX -->
+<script>
+(function () {
+  const footer    = document.getElementById('main-footer');
+  const banner    = document.getElementById('cookie-banner');
+  const btnAccept = document.getElementById('cookie-accept');
+  const btnDecline= document.getElementById('cookie-decline');
+
+  if (!footer || !banner) return;
+
+  // Optional: sanfte Animation beim Verschieben
+  if (!footer.style.transition) {
+    footer.style.transition = 'bottom 0.25s ease';
+  }
+
+  function isBannerVisible() {
+    // Sichtbar, wenn CSS-Display nicht 'none' ist UND Höhe > 0
+    const cs = getComputedStyle(banner);
+    return cs.display !== 'none' && banner.getBoundingClientRect().height > 0;
+  }
+
+  function updateFooterOffset(source) {
+    const offset = isBannerVisible() ? Math.ceil(banner.getBoundingClientRect().height) : 0;
+    footer.style.paddingBottom = offset + 'px';
+    if (window.console && console.debug) {
+      console.debug(`[OverlapFix] footer.bottom = ${footer.style.paddingBottom} (${source||'update'})`);
+    }
+  }
+
+  // Debounce für Resize
+  let resizeTimer;
+  function onResize() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => updateFooterOffset('resize'), 100);
+  }
+
+  // MutationObserver: reagiert auf style/class-Änderungen des Banners
+  const mo = new MutationObserver(() => updateFooterOffset('mutation'));
+  mo.observe(banner, { attributes: true, attributeFilter: ['style', 'class'] });
+
+  // Falls der Banner Inhalt dynamisch rendert (z. B. Fonts), kurz nachladen neu messen
+  window.addEventListener('load', () => updateFooterOffset('load'));
+  document.addEventListener('DOMContentLoaded', () => updateFooterOffset('domcontentloaded'));
+  window.addEventListener('resize', onResize);
+
+  // Nach Nutzeraktion (Accept/Decline) erneut anpassen
+  btnAccept && btnAccept.addEventListener('click', () => {
+    // Warten, bis dein Banner-Hide greift
+    setTimeout(() => updateFooterOffset('accept'), 0);
+  });
+  btnDecline && btnDecline.addEventListener('click', () => {
+    setTimeout(() => updateFooterOffset('decline'), 0);
+  });
+
+  // Sicherheitsnetz: erneut messen, falls irgendwas asynchron ändert
+  setTimeout(() => updateFooterOffset('safety-100ms'), 100);
+  setTimeout(() => updateFooterOffset('safety-400ms'), 400);
+})();
+</script>
+<!-- COOKIE Banner & FOOTER OVERLAP FIX END -->
+
+
+
 </body>
 </html>
