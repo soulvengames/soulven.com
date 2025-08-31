@@ -40,28 +40,8 @@
     <link href="../css/modal-video.min.css" rel="stylesheet">
     <!-- Main Stylesheet -->
     <link href="../css/style.css" rel="stylesheet">
-
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WWQHNJD9');</script>
-    <!-- End Google Tag Manager -->
-  
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WWQHNJD9"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <!-- Loading Screen -->
-    <div id="loader-wrapper">
-        <h1 class="loader-logo"><img class="img-fluid" src="../images/soulven-logo.png" alt="Official Soulven Logo"></h1>
-        <div id="progress"></div>
-        <h3 class="loader-text">LOADING</h3>
-    </div>
-    
     <!-- //// HEADER //// -->
     <header id="main-header">
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
@@ -216,6 +196,153 @@ document.addEventListener("DOMContentLoaded", function () {
   steamLink.setAttribute("href", hrefNow + joiner + utm);
 });
 </script>
+
+
+
+<!-- COOCKIE CONSENTS -->
+ <style>
+  .cookie-banner {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 9999;
+    background: #0f1221; color: #fff; padding: 16px;
+    box-shadow: 0 -8px 24px rgba(0,0,0,.35);
+    display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap;
+  }
+  .cookie-banner p { margin: 0; line-height: 1.4; max-width: 720px; }
+  .cookie-actions { display: flex; gap: 10px; }
+  .cookie-btn {
+    border: 0; padding: 10px 16px; cursor: pointer; border-radius: 8px; font-weight: 600;
+  }
+  .cookie-accept { background: #3fb950; color: #0b2412; }
+  .cookie-decline { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.3); }
+  .cookie-link { color: #8ab4ff; text-decoration: underline; }
+</style>
+
+    <div id="cookie-banner" class="cookie-banner" style="display:none;">
+    <p>
+        We use cookies and tags (e.g., Google Tag Manager) to analyze traffic and improve marketing.
+        You can read more in our <a class="cookie-link" href="../privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.
+    </p>
+    <div class="cookie-actions">
+        <button id="cookie-accept" class="cookie-btn cookie-accept" aria-label="Accept all">Accept</button>
+        <button id="cookie-decline" class="cookie-btn cookie-decline" aria-label="Decline">Decline</button>
+    </div>
+    </div>
+
+    <script>
+    // === Config: Deine GTM-ID hier eintragen ===
+    const GTM_ID = "GTM-WWQHNJD9";
+
+    function loadGTM(id) {
+        // dataLayer init
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+
+        // Script inject
+        var gtmScript = document.createElement('script');
+        gtmScript.async = true;
+        gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=' + encodeURIComponent(id);
+        document.head.appendChild(gtmScript);
+
+        // (Optional) noscript-Äquivalent: iframe hinzufügen, falls nötig
+        // Nur sinnvoll, wenn du unbedingt ein Fallback willst – Consent ist aber JS-basiert.
+        // var iframe = document.createElement('iframe');
+        // iframe.src = 'https://www.googletagmanager.com/ns.html?id=' + encodeURIComponent(id);
+        // iframe.height = 0; iframe.width = 0; iframe.style.display = 'none'; iframe.style.visibility = 'hidden';
+        // document.body.appendChild(iframe);
+    }
+
+    function showBanner() {
+        var banner = document.getElementById('cookie-banner');
+        if (banner) banner.style.display = 'flex';
+    }
+
+    function hideBanner() {
+        var banner = document.getElementById('cookie-banner');
+        if (banner) banner.style.display = 'none';
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const consent = localStorage.getItem('cookie_consent');
+
+        if (consent === 'granted') {
+        // Bereits zugestimmt → GTM laden
+        loadGTM(GTM_ID);
+        } else {
+        // Keine Zustimmung gespeichert → Banner zeigen (Ablehnung wird NICHT gespeichert)
+        showBanner();
+        }
+
+        document.getElementById('cookie-accept')?.addEventListener('click', function () {
+        localStorage.setItem('cookie_consent', 'granted');
+        hideBanner();
+        loadGTM(GTM_ID);
+        });
+
+        document.getElementById('cookie-decline')?.addEventListener('click', function () {
+        // Ablehnung NICHT speichern → beim Reload wird wieder gefragt
+        hideBanner();
+        });
+    });
+    </script>
+<!-- COOCKIE CONSENTS END-->
+
+<!-- COOKIE Banner & FOOTER OVERLAP FIX -->
+
+<script>
+(function () {
+  const footer = document.getElementById('main-footer');
+  const banner = document.getElementById('cookie-banner');
+  const btnAccept = document.getElementById('cookie-accept');
+  const btnDecline = document.getElementById('cookie-decline');
+
+  if (!footer || !banner) return;
+
+  // Hilfsfunktion: prüft, ob Banner sichtbar ist
+  function isBannerVisible() {
+    return banner.style.display !== 'none' && getComputedStyle(banner).display !== 'none';
+  }
+
+  // Setzt bottom auf Banner-Höhe (oder 0)
+  function updateFooterOffset() {
+    if (!footer) return;
+    const offset = isBannerVisible() ? Math.ceil(banner.getBoundingClientRect().height) : 0;
+    footer.style.bottom = offset + 'px';
+  }
+
+  // Debounce für Resize
+  let resizeTimer;
+  function onResize() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(updateFooterOffset, 100);
+  }
+
+  // Beobachte Änderungen am Banner (z. B. wenn per JS ein-/ausgeblendet)
+  const mo = new MutationObserver(updateFooterOffset);
+  mo.observe(banner, { attributes: true, attributeFilter: ['style', 'class'] });
+
+  // Klickevents: nach Auswahl Banner weg -> Footer zurücksetzen
+  btnAccept && btnAccept.addEventListener('click', () => {
+    // Warte minimal, bis Banner ausgeblendet wurde
+    setTimeout(updateFooterOffset, 0);
+  });
+  btnDecline && btnDecline.addEventListener('click', () => {
+    setTimeout(updateFooterOffset, 0);
+  });
+
+  // Reagiere auf Fenstergröße
+  window.addEventListener('resize', onResize);
+
+  // Initial aufrufen, sobald DOM bereit ist
+  document.addEventListener('DOMContentLoaded', updateFooterOffset);
+
+  // Falls dein Code den Banner später einblendet:
+  window.addEventListener('load', updateFooterOffset);
+})();
+</script>
+
+
+<!-- COOCKIE Banner & FOOTER OVERLAP FIX END-->
+
 
 
 </body>
