@@ -7,6 +7,19 @@
     <meta name="author" content="Soulven UG">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
 
+     <!-- Consent Mode Grundzustand -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'functionality_storage': 'granted'
+    });
+  </script>
+
     <!-- WEBSITE TITLE & DESCRIPTION -->
     <title>Soulven - Join Us</title>
     <meta name="description" content="We´re an independent 3D and Game Studio based in germany. Our mission is it to develop creative, innovative and interactive 3D experiences to unlock the users best experience.">
@@ -157,12 +170,26 @@
     <script src="../js/validator.min.js"></script>
     <script src="../js/strider.js"></script>
 
+    <script>
+    // Consent Mode Grundzustand (alles verweigert bis Zustimmung)
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'functionality_storage': 'granted'  // notwendig für Grundfunktionen (z. B. Spracheinstellung)
+    });
+    </script>
+
 <script>
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
   })
 </script>
 
+<!-- set utm links for steam -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   // Ziel-Link finden (Steam: My Dear Emma)
@@ -196,11 +223,11 @@ document.addEventListener("DOMContentLoaded", function () {
   steamLink.setAttribute("href", hrefNow + joiner + utm);
 });
 </script>
+<!-- set utm links for steam end -->
 
 
-
-<!-- COOCKIE CONSENTS -->
- <style>
+<!-- COOKIE CONSENTS -->
+<style>
   .cookie-banner {
     position: fixed; left: 0; right: 0; bottom: 0; z-index: 9999;
     background: #0f1221; color: #fff; padding: 16px;
@@ -217,74 +244,96 @@ document.addEventListener("DOMContentLoaded", function () {
   .cookie-link { color: #8ab4ff; text-decoration: underline; }
 </style>
 
-    <div id="cookie-banner" class="cookie-banner" style="display:none;">
-    <p>
-        We use cookies and tags (e.g., Google Tag Manager) to analyze traffic and improve marketing.
-        You can read more in our <a class="cookie-link" href="../privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.
-    </p>
-    <div class="cookie-actions">
-        <button id="cookie-accept" class="cookie-btn cookie-accept" aria-label="Accept all">Accept</button>
-        <button id="cookie-decline" class="cookie-btn cookie-decline" aria-label="Decline">Decline</button>
-    </div>
-    </div>
+<div id="cookie-banner" class="cookie-banner" style="display:none;">
+  <p>
+    We use cookies and tags (e.g., Google Tag Manager) to analyze traffic and improve marketing.
+    You can read more in our <a class="cookie-link" href="../privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.
+  </p>
+  <div class="cookie-actions">
+    <button id="cookie-accept" class="cookie-btn cookie-accept" aria-label="Accept all">Accept</button>
+    <button id="cookie-decline" class="cookie-btn cookie-decline" aria-label="Decline">Decline</button>
+  </div>
+</div>
 
-    <script>
-    // === Config: Deine GTM-ID hier eintragen ===
-    const GTM_ID = "GTM-WWQHNJD9";
+<script>
+  // === Config: Deine GTM-ID hier eintragen ===
+  const GTM_ID = "GTM-WWQHNJD9";
 
-    function loadGTM(id) {
-        // dataLayer init
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+  function loadGTM(id) {
+    console.log("[CookieConsent] Lade Google Tag Manager mit ID:", id);
+    // dataLayer init
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
 
-        // Script inject
-        var gtmScript = document.createElement('script');
-        gtmScript.async = true;
-        gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=' + encodeURIComponent(id);
-        document.head.appendChild(gtmScript);
+    // Script inject
+    var gtmScript = document.createElement('script');
+    gtmScript.async = true;
+    gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=' + encodeURIComponent(id);
+    document.head.appendChild(gtmScript);
+  }
 
-        // (Optional) noscript-Äquivalent: iframe hinzufügen, falls nötig
-        // Nur sinnvoll, wenn du unbedingt ein Fallback willst – Consent ist aber JS-basiert.
-        // var iframe = document.createElement('iframe');
-        // iframe.src = 'https://www.googletagmanager.com/ns.html?id=' + encodeURIComponent(id);
-        // iframe.height = 0; iframe.width = 0; iframe.style.display = 'none'; iframe.style.visibility = 'hidden';
-        // document.body.appendChild(iframe);
+  function showBanner() {
+    var banner = document.getElementById('cookie-banner');
+    if (banner) {
+      banner.style.display = 'flex';
+      console.log("[CookieConsent] Banner eingeblendet (keine Zustimmung gefunden).");
+    }
+  }
+
+  function hideBanner() {
+    var banner = document.getElementById('cookie-banner');
+    if (banner) banner.style.display = 'none';
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const consent = localStorage.getItem('cookie_consent');
+
+    if (consent === 'granted') {
+      console.log("[CookieConsent] Bereits gespeicherte Zustimmung gefunden → GTM wird geladen.");
+      gtag('consent', 'update', {
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+        'analytics_storage': 'granted'
+      });
+      loadGTM(GTM_ID);
+    } else {
+      console.log("[CookieConsent] Keine Zustimmung gespeichert → Banner wird angezeigt.");
+      showBanner();
     }
 
-    function showBanner() {
-        var banner = document.getElementById('cookie-banner');
-        if (banner) banner.style.display = 'flex';
-    }
+    document.getElementById('cookie-accept')?.addEventListener('click', function () {
+      localStorage.setItem('cookie_consent', 'granted');
+      hideBanner();
 
-    function hideBanner() {
-        var banner = document.getElementById('cookie-banner');
-        if (banner) banner.style.display = 'none';
-    }
+      console.log("[CookieConsent] User hat zugestimmt → Consent Mode 'granted', GTM wird geladen.");
 
-    document.addEventListener('DOMContentLoaded', function () {
-        const consent = localStorage.getItem('cookie_consent');
+      gtag('consent', 'update', {
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+        'analytics_storage': 'granted'
+      });
 
-        if (consent === 'granted') {
-        // Bereits zugestimmt → GTM laden
-        loadGTM(GTM_ID);
-        } else {
-        // Keine Zustimmung gespeichert → Banner zeigen (Ablehnung wird NICHT gespeichert)
-        showBanner();
-        }
-
-        document.getElementById('cookie-accept')?.addEventListener('click', function () {
-        localStorage.setItem('cookie_consent', 'granted');
-        hideBanner();
-        loadGTM(GTM_ID);
-        });
-
-        document.getElementById('cookie-decline')?.addEventListener('click', function () {
-        // Ablehnung NICHT speichern → beim Reload wird wieder gefragt
-        hideBanner();
-        });
+      loadGTM(GTM_ID);
     });
-    </script>
-<!-- COOCKIE CONSENTS END-->
+
+    document.getElementById('cookie-decline')?.addEventListener('click', function () {
+      hideBanner();
+      console.log("[CookieConsent] User hat abgelehnt → Consent Mode bleibt 'denied'.");
+
+      gtag('consent', 'update', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied'
+      });
+    });
+  });
+</script>
+<!-- COOKIE CONSENTS END -->
+
+
 
 <!-- COOKIE Banner & FOOTER OVERLAP FIX -->
 
