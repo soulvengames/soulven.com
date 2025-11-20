@@ -131,7 +131,7 @@
                             <div id="contact-info">
                                 <ul>
                                     <li><i class="fa fa-envelope"></i><p>Email: <span class="colored"><script>var1="hello",var2="@",var3="soulven.com",document.write(var1+var2+var3);</script></span></p></li>
-                                    <li><i class="fa fa-map-marker"></i><p>Address: <span class="colored">Platz der Einheit 2, 60327, Frankfurt am Main</span></p></li>
+                                    <li><i class="fa fa-map-marker"></i><p>Address: <span class="colored">Hanauer Landstr. 521, 60386, Frankfurt am Main</span></p></li>
                                 </ul>
                             </div>
                         </div>
@@ -214,6 +214,8 @@
         utm = "utm_source=google&utm_medium=cpc&utm_campaign=website-join-google";
     } else if (pageHash.includes("#tiktok")) {
         utm = "utm_source=tiktok&utm_medium=cpc&utm_campaign=website-join-tiktok";
+    } else {
+        utm = "utm_source=website&utm_medium=button&utm_campaign=mde_joinpage";
     }
 
     if (!utm) return; // keine passende Bedingung -> nichts ändern
