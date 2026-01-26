@@ -409,7 +409,7 @@ button {
 }
 .hero-caption h1 {
     font-weight: normal;
-    font-size: 5rem;
+    font-size: 4rem;
     font-family: Soulven Primary, sans-serif;
 }
 
@@ -589,11 +589,19 @@ a.pi-contact:hover {
 }
 .steam-btn i {
     float: left;
+      display: flex;
+  align-items: center;   /* 👈 vertikal zentriert */
+  justify-content: center; /* optional: horizontal zentriert */
+  height: 64px;          /* muss zur Button-Höhe passen */
 }
 .steam-btn p {
     float: right;
     line-height: 20px;
     font-weight: bold;
+    display: flex;
+    align-items: center;   /* 👈 vertikal zentriert */
+    justify-content: center; /* optional: horizontal zentriert */
+    height: 64px;          /* muss zur Button-Höhe passen */
 }
 .button-store {
     display: inline-block;
