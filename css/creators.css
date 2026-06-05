@@ -1,0 +1,821 @@
+/* ------------------------------------------------------------------
+   Soulven Creator Program page styles
+   Brand refresh with red-heart accents and sticker showcase.
+------------------------------------------------------------------- */
+
+:root {
+    --creator-teal: #3AC1AC;
+    --creator-teal-soft: rgba(58, 193, 172, 0.14);
+    --creator-red: #ff2a2a;
+    --creator-red-soft: rgba(255, 42, 42, 0.16);
+    --creator-white-soft: #d7d7d7;
+}
+
+.creators-page main {
+    padding-top: 96px;
+}
+
+.creator-hidden {
+    display: none !important;
+}
+
+.creator-accent-red {
+    color: var(--creator-red);
+    text-shadow: 0 0 12px rgba(255, 42, 42, 0.38);
+}
+
+.creator-countdown-top {
+    padding-top: 70px;
+}
+
+.creator-countdown-top .heading h1 {
+    line-height: 1.22;
+}
+
+.creator-countdown-panel,
+.creator-card,
+.creator-info-box,
+.creator-registration-state,
+.creator-bonus-panel {
+    background: rgba(18, 18, 18, 0.9);
+    border: 1px solid rgba(58, 193, 172, 0.28);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.32);
+}
+
+.creator-countdown-panel {
+    padding: 34px;
+    text-align: center;
+}
+
+.creator-countdown-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(120px, 1fr));
+    gap: 18px;
+}
+
+.creator-countdown-item {
+    padding: 26px 14px;
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.creator-countdown-item span {
+    display: block;
+    color: var(--creator-teal);
+    font-family: Soulven Primary, sans-serif;
+    font-size: 3rem;
+    line-height: 1;
+    letter-spacing: 4px;
+}
+
+.creator-countdown-item small {
+    display: block;
+    margin-top: 14px;
+    color: #ffffff;
+    font-family: Soulven Secondary, sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.creator-countdown-message {
+    margin-top: 24px;
+    color: var(--creator-white-soft);
+    text-align: center;
+}
+
+.creator-countdown-panel-open {
+    border-color: rgba(58, 193, 172, 0.8);
+}
+
+.creator-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 110px 0 80px 0;
+    background:
+        radial-gradient(circle at 18% 24%, rgba(58, 193, 172, 0.16), transparent 32%),
+        radial-gradient(circle at 78% 16%, rgba(255, 42, 42, 0.12), transparent 20%),
+        radial-gradient(circle at 84% 22%, rgba(58, 193, 172, 0.12), transparent 24%),
+        linear-gradient(135deg, rgba(10, 10, 10, 0.98), rgba(20, 20, 20, 0.9));
+    border-bottom: 2px solid rgba(58, 193, 172, 0.35);
+}
+
+.creator-hero::before,
+.creator-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.creator-hero::before {
+    background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 18px 18px;
+    opacity: 0.18;
+}
+
+.creator-hero::after {
+    background: linear-gradient(180deg, transparent 0%, rgba(17, 17, 17, 0.82) 100%);
+}
+
+.creator-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.creator-eyebrow {
+    color: var(--creator-teal);
+    font-family: Soulven Secondary, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.creator-heart-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.creator-heart-row-sticker {
+    justify-content: center;
+    margin: 10px 0 0;
+    gap: 8px;
+}
+
+.creator-pixel-heart {
+    position: relative;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: var(--creator-red);
+    transform: rotate(-45deg);
+    box-shadow: 0 0 18px rgba(255, 42, 42, 0.45);
+}
+
+.creator-pixel-heart::before,
+.creator-pixel-heart::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: var(--creator-red);
+    border-radius: 50%;
+}
+
+.creator-pixel-heart::before {
+    top: -11px;
+    left: 0;
+}
+
+.creator-pixel-heart::after {
+    top: 0;
+    left: 11px;
+}
+
+.creator-pixel-heart-small {
+    width: 12px;
+    height: 12px;
+}
+
+.creator-pixel-heart-small::before,
+.creator-pixel-heart-small::after {
+    width: 12px;
+    height: 12px;
+}
+
+.creator-pixel-heart-small::before {
+    top: -6px;
+}
+
+.creator-pixel-heart-small::after {
+    left: 6px;
+}
+
+.creator-hero h1 {
+    font-size: 3rem;
+    line-height: 1.08;
+    margin-bottom: 24px;
+}
+
+.creator-lead {
+    font-size: 1.15rem;
+    line-height: 1.8rem;
+    max-width: 700px;
+    color: #ffffff;
+}
+
+.creator-copy {
+    color: var(--creator-white-soft);
+    max-width: 680px;
+}
+
+.creator-buzz-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.creator-buzz-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 14px;
+    border: 1px solid rgba(58, 193, 172, 0.4);
+    background: rgba(58, 193, 172, 0.08);
+    color: var(--creator-teal);
+    font-family: Soulven Secondary, sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.creator-buzz-pill-red {
+    border-color: rgba(255, 42, 42, 0.45);
+    background: rgba(255, 42, 42, 0.12);
+    color: var(--creator-red);
+}
+
+.creator-card-highlight {
+    position: relative;
+    padding: 34px;
+    border-top: 3px solid var(--creator-teal);
+    overflow: hidden;
+}
+
+.creator-card-highlight::after {
+    content: "";
+    position: absolute;
+    right: -80px;
+    top: -80px;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(255, 42, 42, 0.18), transparent 62%);
+    pointer-events: none;
+}
+
+.creator-card-live {
+    border-top-color: var(--creator-red);
+}
+
+.creator-card-label {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 5px 12px;
+    background: var(--creator-teal-soft);
+    color: var(--creator-teal);
+    border: 1px solid rgba(58, 193, 172, 0.4);
+    font-family: Soulven Secondary, sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.creator-card-live .creator-card-label {
+    background: var(--creator-red-soft);
+    color: var(--creator-red);
+    border-color: rgba(255, 42, 42, 0.48);
+}
+
+.creator-card h2,
+.creator-info-box h2,
+.creator-registration-state h2,
+.creator-bonus-title {
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.creator-card p,
+.creator-info-box p,
+.creator-registration-state p,
+.creator-form-fallback,
+.creator-bonus-copy,
+.creator-bonus-list li {
+    color: var(--creator-white-soft);
+}
+
+.creator-card-link {
+    display: inline-block;
+    margin-top: 18px;
+    color: var(--creator-teal);
+}
+
+.creator-card-link:visited {
+    color: var(--creator-teal);
+}
+
+.creator-mini-sticker-wrap {
+    display: flex;
+    justify-content: flex-end;
+    margin: 18px 0 4px;
+}
+
+.creator-mini-sticker-stack {
+    position: relative;
+    width: 138px;
+    height: 92px;
+}
+
+.creator-mini-sticker {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.75);
+    background: linear-gradient(145deg, rgba(18,18,18,0.98), rgba(40,40,40,0.88));
+    box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+}
+
+.creator-mini-sticker-back { width: 72px; height: 72px; right: 12px; top: 10px; opacity: 0.45; }
+.creator-mini-sticker-mid  { width: 72px; height: 72px; right: 18px; top: 6px; opacity: 0.72; }
+.creator-mini-sticker-front {
+    width: 74px; height: 74px; right: 26px; top: 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    border-color: rgba(58, 193, 172, 0.65);
+    box-shadow: 0 0 18px rgba(58, 193, 172, 0.22), 0 10px 28px rgba(0,0,0,0.35);
+}
+
+.creator-mini-sticker-ghost,
+.creator-sticker-ghost {
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.creator-mini-heart-row {
+    display: flex;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.creator-mini-sticker-badge,
+.creator-sticker-badge {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    padding: 6px 10px;
+    background: rgba(15,15,15,0.96);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.65);
+    font-family: Soulven Secondary, sans-serif;
+    letter-spacing: 2px;
+    font-size: 0.95rem;
+    box-shadow: 0 0 18px rgba(255, 42, 42, 0.28);
+}
+
+.creator-info-box {
+    height: 100%;
+    min-height: 270px;
+    padding: 30px 26px;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.creator-info-box:hover {
+    transform: translateY(-4px);
+    border-color: rgba(58, 193, 172, 0.65);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4), 0 0 14px rgba(58, 193, 172, 0.12);
+}
+
+.creator-benefit-box {
+    text-align: center;
+}
+
+.creator-benefit-box h2 {
+    min-height: 72px;
+}
+
+.creator-benefit-icon-box {
+    position: relative;
+    width: 78px;
+    height: 78px;
+    margin: 0 auto 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(58, 193, 172, 0.45);
+    background: rgba(58, 193, 172, 0.08);
+}
+
+.creator-benefit-icon-box i {
+    color: var(--creator-teal);
+    font-size: 2.2rem;
+}
+
+.creator-benefit-heart-icon .creator-heart-dot {
+    position: absolute;
+    right: -2px;
+    top: -2px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--creator-red);
+    box-shadow: 0 0 10px rgba(255, 42, 42, 0.6);
+}
+
+.creator-bonus-panel {
+    padding: 36px 34px;
+    position: relative;
+    overflow: hidden;
+}
+
+.creator-bonus-panel::before {
+    content: "";
+    position: absolute;
+    inset: auto -10% -40% auto;
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(58, 193, 172, 0.12), transparent 65%);
+    pointer-events: none;
+}
+
+.creator-bonus-label {
+    display: inline-block;
+    margin-bottom: 16px;
+    padding: 5px 12px;
+    background: rgba(255, 42, 42, 0.12);
+    color: var(--creator-red);
+    border: 1px solid rgba(255, 42, 42, 0.36);
+    font-family: Soulven Secondary, sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.creator-bonus-title {
+    font-size: 2rem;
+}
+
+.creator-bonus-list {
+    margin: 18px 0 0;
+    padding: 0;
+}
+
+.creator-bonus-list li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+.creator-bonus-list li::before {
+    content: "◆";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--creator-teal);
+    font-size: 0.9rem;
+}
+
+.creator-sticker-showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 280px;
+}
+
+.creator-sticker-stack {
+    position: relative;
+    width: 280px;
+    height: 250px;
+}
+
+.creator-sticker-layer,
+.creator-sticker-face {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+}
+
+.creator-sticker-layer {
+    right: 0;
+    bottom: 8px;
+    background: linear-gradient(145deg, rgba(220,220,220,0.96), rgba(128,128,128,0.88));
+    border: 2px solid rgba(255,255,255,0.82);
+}
+
+.creator-sticker-layer-3 { transform: translateX(18px) translateY(14px); opacity: 0.45; }
+.creator-sticker-layer-2 { transform: translateX(10px) translateY(8px); opacity: 0.62; }
+.creator-sticker-layer-1 { transform: translateX(2px) translateY(2px); opacity: 0.8; }
+
+.creator-sticker-face {
+    left: 0;
+    top: 22px;
+    border: 3px solid rgba(58, 193, 172, 0.75);
+    background: radial-gradient(circle at 35% 30%, rgba(38,38,38,0.98), rgba(5,5,5,0.98));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 28px rgba(58, 193, 172, 0.22), 0 18px 40px rgba(0,0,0,0.34);
+}
+
+.creator-sticker-ghost {
+    font-size: 4rem;
+}
+
+.creator-sticker-badge {
+    right: 8px;
+    top: 0;
+    font-size: 1rem;
+}
+
+.creator-registration-state {
+    padding: 34px;
+    text-align: center;
+}
+
+.creator-form-frame {
+    position: relative;
+    width: 100%;
+    min-height: 1180px;
+    height: 1180px;
+    margin-top: 28px;
+    overflow: hidden;
+    background: #ffffff;
+    border: 2px solid rgba(58, 193, 172, 0.45);
+    border-radius: 2px;
+}
+
+.creator-form-frame iframe {
+    display: block;
+    width: 100%;
+    min-height: 1180px;
+    height: 1180px;
+    max-height: none;
+    border: 0;
+    background: #ffffff;
+}
+
+.creator-form-fallback {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.creator-form-fallback a,
+.creator-form-fallback a:visited {
+    color: var(--creator-teal);
+}
+
+@media (max-width: 991px) {
+    .creators-page main {
+        padding-top: 80px;
+    }
+
+    .creator-countdown-top {
+        padding-top: 45px;
+    }
+
+    .creator-countdown-top .heading h1,
+    .creator-hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .creator-hero {
+        padding: 80px 0 60px 0;
+    }
+
+    .creator-card-highlight {
+        margin-top: 34px;
+    }
+
+    .creator-countdown-grid {
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
+    }
+
+    .creator-info-box {
+        height: auto;
+        margin-bottom: 24px;
+    }
+
+    .creator-bonus-panel {
+        padding: 28px 22px;
+    }
+
+    .creator-sticker-showcase {
+        margin-top: 28px;
+    }
+
+    .creator-form-frame,
+    .creator-form-frame iframe {
+        min-height: 1450px;
+    }
+}
+
+@media (max-width: 575px) {
+    .creator-countdown-top .heading h1,
+    .creator-hero h1 {
+        font-size: 2rem;
+        letter-spacing: 3px;
+    }
+
+    .creator-lead {
+        font-size: 1rem;
+        line-height: 1.55rem;
+    }
+
+    .creator-card-highlight,
+    .creator-countdown-panel,
+    .creator-registration-state,
+    .creator-bonus-panel {
+        padding: 24px 18px;
+    }
+
+    .creator-countdown-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .creator-countdown-item {
+        padding: 20px 10px;
+    }
+
+    .creator-countdown-item span {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+    }
+
+    .creator-buzz-row {
+        gap: 8px;
+    }
+
+    .creator-buzz-pill {
+        font-size: 0.72rem;
+        padding: 6px 10px;
+    }
+
+    .creator-mini-sticker-wrap {
+        justify-content: center;
+    }
+
+    .creator-sticker-stack {
+        width: 230px;
+        height: 220px;
+    }
+
+    .creator-sticker-layer,
+    .creator-sticker-face {
+        width: 140px;
+        height: 140px;
+    }
+
+    .creator-sticker-ghost {
+        font-size: 3.4rem;
+    }
+
+    .creator-form-frame,
+    .creator-form-frame iframe {
+        min-height: 1650px;
+    }
+}
+
+
+/* --- Final polish: no benefit subtext + real sticker image --- */
+.creator-benefit-box {
+    min-height: 245px;
+}
+
+.creator-benefit-box h2 {
+    min-height: 0;
+    margin-bottom: 0;
+}
+
+.creator-benefit-box p {
+    display: none;
+}
+
+/* Hide the old CSS-generated sticker/ghost if cached markup still exists somewhere */
+.creator-mini-sticker-stack,
+.creator-sticker-stack {
+    display: none;
+}
+
+.creator-real-sticker-card {
+    position: relative;
+    margin: 0;
+    background:
+        linear-gradient(135deg, rgba(58, 193, 172, 0.16), transparent 36%),
+        linear-gradient(145deg, rgba(13, 13, 13, 0.96), rgba(22, 22, 22, 0.92));
+    border: 1px solid rgba(58, 193, 172, 0.42);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.34), 0 0 24px rgba(58, 193, 172, 0.10);
+    overflow: hidden;
+}
+
+.creator-real-sticker-card::before {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    border: 1px solid rgba(58, 193, 172, 0.22);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.creator-real-sticker-card::after {
+    content: "10x";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 3;
+    padding: 6px 10px;
+    background: rgba(8, 8, 8, 0.92);
+    border: 1px solid rgba(255, 42, 42, 0.55);
+    color: var(--creator-red);
+    font-family: Soulven Secondary, sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(255, 42, 42, 0.42);
+}
+
+.creator-real-sticker-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.creator-real-sticker-card figcaption {
+    position: relative;
+    z-index: 3;
+    margin: 0;
+    padding: 10px 12px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.72);
+    border-top: 1px solid rgba(58, 193, 172, 0.25);
+    font-family: Soulven Secondary, sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 1.5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.creator-real-sticker-card-small {
+    width: min(100%, 260px);
+    margin-left: auto;
+}
+
+.creator-real-sticker-card-small figcaption {
+    font-size: 0.74rem;
+}
+
+.creator-real-sticker-card-large {
+    width: min(100%, 360px);
+    margin: 0 auto;
+}
+
+.creator-url-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 18px 24px;
+    background: rgba(18, 18, 18, 0.9);
+    border: 1px solid rgba(58, 193, 172, 0.35);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.32);
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.creator-url-label {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    border: 1px solid rgba(255, 42, 42, 0.42);
+    background: rgba(255, 42, 42, 0.10);
+    color: var(--creator-red);
+    font-family: Soulven Secondary, sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.creator-url-bar a,
+.creator-url-bar a:visited {
+    color: #fff;
+    font-family: Soulven Secondary, sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.creator-url-bar a:hover {
+    color: var(--creator-teal);
+    text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+    .creator-real-sticker-card-small {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 575px) {
+    .creator-real-sticker-card-large {
+        width: 100%;
+    }
+
+    .creator-url-bar a,
+    .creator-url-bar a:visited {
+        font-size: 0.95rem;
+        letter-spacing: 1px;
+        word-break: break-word;
+    }
+}
