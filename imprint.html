@@ -4,7 +4,7 @@
     <meta name="googlebot" content="noindex">
     <meta name="robots" content="noindex, nofollow">
     <meta charset="utf-8">
-    <meta name="author" content="Soulven UG">
+    <meta name="author" content="Soulven GmbH">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
 
     <!-- WEBSITE TITLE & DESCRIPTION -->
@@ -99,7 +99,7 @@
             <a href="about"></a><!-- Nav Anchor -->
             <div class="row heading tiny-margin">
                 <div class="col-md-auto">
-                    <h1 class="animation-element slide-down">Impressum</h1>
+                    <h1 class="animation-element slide-down">Imprint</h1>
                 </div>
                 <div class="col">
                     <hr class="animation-element extend">
@@ -107,30 +107,65 @@
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
-                    <p>Soulven GmbH<br /> 
-                    Hanauer Landstr. 521<br />
-                    60386 Frankfurt am Main</p>
-                    
-                    <p>Handelsregister: HRB129770<br />
-                    Registergericht: Amtsgericht Frankfurt am Main</p>
-                    
-                    <p><strong>Vertreten durch:</strong><br />
-                    Ey&uuml;p Zengin</p>
+                                                            <h2>Information according to Section 5 DDG</h2>
+                    <p>
+                        Soulven GmbH<br />
+                        Hanauer Landstr. 521<br />
+                        60386 Frankfurt am Main<br />
+                        Germany
+                    </p>
+
+                    <p>
+                        Commercial Register: HRB 129770<br />
+                        Register Court: Local Court of Frankfurt am Main
+                    </p>
+
+                    <p>
+                        <strong>Represented by:</strong><br />
+                        Ey&uuml;p Zengin
+                    </p>
                     <br>
-                    <h2>Kontakt</h2>
-                    E-Mail: <script>var1="hello",var2="@",var3="soulven.com",document.write(var1+var2+var3);</script></p>
+                    <h2>Contact</h2>
+                    <p>
+                        E-mail:
+                        <button id="revealMail" type="button" aria-label="Show email">Show email</button>
+                        <span id="mailSlot" aria-live="polite"></span>
+                    </p>
+                    <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        var btn = document.getElementById('revealMail');
+                        var slot = document.getElementById('mailSlot');
+
+                        if (!btn || !slot) return;
+
+                        btn.addEventListener('click', function () {
+                            if (slot.querySelector('a')) return;
+
+                            const parts = ['hello', 'soulven', 'com'];
+                            const addr = parts[0] + '@' + parts[1] + '.' + parts[2];
+                            const a = document.createElement('a');
+                            a.href = 'mailto:' + addr;
+                            a.rel = 'nofollow noopener';
+                            a.textContent = addr;
+                            slot.appendChild(a);
+                        });
+                    });
+                    </script>
                     <br>
-                    <h2>Umsatzsteuer-ID</h2>
-                    <p>Umsatzsteuer-Identifikationsnummer gem&auml;&szlig; &sect; 27 a Umsatzsteuergesetz:<br />
-                        DE359134693</p>
-                        <br>
-                    <h2>Verbraucher&shy;streit&shy;beilegung/Universal&shy;schlichtungs&shy;stelle</h2>
-                    <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+                    <h2>VAT ID</h2>
+                    <p>
+                        VAT identification number according to Section 27a of the German VAT Act:<br />
+                        DE359134693
+                    </p>
+                    <br>
+                    <h2>Consumer dispute resolution / Universal Arbitration Board</h2>
+                    <p>
+                        We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board.
+                    </p>
                     
                 </div>
                 <div class="col-md-6">
-                    <img id="support-image" src="images/official-soulven-banner.png" data-src="images/official-soulven-banner.png" class="img-fluid b-lazy" alt="digital collage">
+                    <img id="support-image" src="images/official-soulven-banner.jpg" data-src="images/official-soulven-banner.jpg" class="img-fluid b-lazy" alt="digital collage">
                 </div>
             </div>
         </div>
