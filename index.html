@@ -97,6 +97,12 @@
         .about-pillar { background: rgba(57,189,169,.08); border: 1px solid rgba(57,189,169,.18); border-radius: 14px; padding: 15px; }
         .about-pillar strong { color: #fff; display: block; margin-bottom: 4px; }
         .about-pillar span { color: var(--soulven-text-soft); font-size: .94rem; line-height: 1.55; }
+
+        .mde-actions {
+            display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-top: 22px;
+        }
+        .mde-actions .steam-btn { margin: 0; }
+        .mde-actions .steam-btn a { min-width: 150px; justify-content: center; }
         @media (max-width: 767px) {
             .trust-strip, .about-pillars { grid-template-columns: 1fr; }
             .hero-caption .colored { font-size: 1.8rem !important; }
@@ -211,20 +217,27 @@
                         </div>
                     <div class="col-lg-12 col-xl-7 game-card-right">
                         <h2 class="short-hr-left"><img height="50" src="./images/MyDearEmma_Logo.jpg" alt="My Dear Emma logo"/>&nbsp;&nbsp;My Dear Emma</h2>
-                        <p class="tags"><span class="subtle">Narrative Adventure | Exploration | Puzzle | PC | <div class="demand-status"></div> In Development</span> </p>
+                        <p class="tags"><span class="subtle">Narrative Adventure | Exploration | Puzzle | PC | <div class="demand-status"></div> <span id="mde-release-status">In Development</span></span> </p>
                         <p class="game-description">My Dear Emma is a relaxed first-person narrative adventure about Emma Wiedman, a biologist and nature photographer who returns to her grandparents’ estate after the death of her grandfather. Guided by a notebook, a map and a final scavenger hunt, players uncover childhood memories, family secrets and the question of what Emma truly wants her life to become. <br><!--<span class="expand colored strong" data-toggle="modal" data-target="#game1">Read More</span<!--></p>
-                        <div class="steam-btn">
-                            <a target="_blank" href="https://store.steampowered.com/app/2577080/My_Dear_Emma/?utm_source=website&utm_medium=button&utm_campaign=mde_homepage">
-                                <i class="fa fa-steam fa-3x"></i>
-                                <p style="margin-left:10px">WISHLIST</p>
-                            </a>
-                        </div>
-                        <br>
-                        <div class="steam-btn">
-                            <a target="_blank" href="https://store.steampowered.com/app/4345540/My_Dear_Emma_Prologue/?utm_source=website&utm_medium=button&utm_campaign=mde_homepage">
-                                <i class="fa fa-gamepad fa-3x"></i>
-                                <p>DEMO</p>
-                            </a>
+                        <div class="mde-actions">
+                            <div class="steam-btn">
+                                <a target="_blank" href="https://store.steampowered.com/app/2577080/My_Dear_Emma/?utm_source=website&utm_medium=button&utm_campaign=mde_homepage">
+                                    <i class="fa fa-steam fa-3x"></i>&nbsp;&nbsp;
+                                    <p style="margin-left:10px">ADD TO WISHLIST</p>
+                                </a>
+                            </div>
+                            <div class="steam-btn">
+                                <a target="_blank" href="https://store.steampowered.com/app/4345540/My_Dear_Emma_Prologue/?utm_source=website&utm_medium=button&utm_campaign=mde_homepage">
+                                    <i class="fa fa-gamepad fa-3x"></i>&nbsp;&nbsp;
+                                    <p>PLAY PROLOGUE</p>
+                                </a>
+                            </div>
+                            <div class="steam-btn">
+                                <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=XF2VSHSdlLg">
+                                    <i class="fa fa-youtube-play fa-3x"></i>&nbsp;&nbsp;
+                                    <p>WATCH TEASER</p>
+                                </a>
+                            </div>
                         </div>
 
                     </div>
@@ -788,6 +801,25 @@
 <!-- COOKIE Banner & FOOTER OVERLAP FIX END -->
 
 
+
+<!-- MY DEAR EMMA RELEASE STATUS SWITCH -->
+<script>
+(function () {
+  // 7 June 2026, 23:00 Europe/Berlin time (CEST in June)
+  const switchTime = new Date('2026-06-07T23:00:00+02:00').getTime();
+  const statusElement = document.getElementById('mde-release-status');
+
+  if (!statusElement) return;
+
+  function updateMdeReleaseStatus() {
+    statusElement.textContent = Date.now() >= switchTime ? 'Release in 2027' : 'In Development';
+  }
+
+  updateMdeReleaseStatus();
+  setInterval(updateMdeReleaseStatus, 60000);
+})();
+</script>
+<!-- MY DEAR EMMA RELEASE STATUS SWITCH END -->
 
 </body>
 </html>
