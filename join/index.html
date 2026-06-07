@@ -1,164 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- META TAGS -->
-    <meta name="robots" content="noindex">
     <meta charset="utf-8">
+    <meta name="robots" content="noindex">
     <meta name="author" content="Soulven GmbH">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-     <!-- Consent Mode Grundzustand -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('consent', 'default', {
-      'ad_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied',
-      'analytics_storage': 'denied',
-      'functionality_storage': 'granted'
-    });
-  </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'analytics_storage': 'denied',
+            'functionality_storage': 'granted'
+        });
+    </script>
 
-    <!-- WEBSITE TITLE & DESCRIPTION -->
     <title>Soulven - Join Us</title>
-    <meta name="description" content="We´re an independent Development-Focused Consulting and 3D Animation and Game Studio based in Frankfurt am Main, Germany. We´re creating Ideas to Become Worlds That Truly Matter. Soul-Driven. Invention-Led.">
-    <meta name="keywords" content="game, simulation, trainign, gaming, cross-platform, videogame, 3D, VR, virtual reality, AR, augmented reality, metaverse, developer, steam, studio, team">
-    <!-- Favicon and Apple Icons -->
-    <link rel="shortcut icon" href="../images/favicon/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="../images/favicon/apple-touch-icon.png" />
-    <link rel="apple-touch-icon" sizes="57x57" href="../images/favicon/apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="../images/favicon/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="../images/favicon/apple-touch-icon-76x76.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="../images/favicon/apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="../images/favicon/apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="../images/favicon/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="../images/favicon/apple-touch-icon-152x152.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon-180x180.png" />
+    <meta name="description" content="Join the Soulven community on Discord and wishlist My Dear Emma on Steam.">
+    <meta name="keywords" content="Soulven, My Dear Emma, Discord, Steam wishlist, indie game, narrative adventure">
 
-    <!-- STYLES -->
-    <!-- Bootstrap -->
+    <link rel="shortcut icon" href="../images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="../images/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="../images/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../images/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../images/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../images/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../images/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon-180x180.png">
+
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <!-- FontAwesome -->
     <link href="../css/font-awesome.min.css" rel="stylesheet">
-    <!-- Animations -->
     <link href="../css/animations.css" rel="stylesheet">
-    <!-- Animation repository for morhpext -->
     <link href="../css/animate.css" rel="stylesheet">
-    <!-- Text Animator morphext -->
     <link href="../css/morphext.css" rel="stylesheet">
-    <!-- Lightbox -->
     <link href="../css/lightbox.min.css" rel="stylesheet">
-    <!-- Video Lightbox -->
     <link href="../css/modal-video.min.css" rel="stylesheet">
-    <!-- Main Stylesheet -->
     <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/join.css" rel="stylesheet">
 </head>
-<body>
-    <!-- //// HEADER //// -->
+<body class="join-page">
     <header id="main-header">
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
             <div class="container">
-                <!-- Site Logo -->
-                <a id="logo" class="navbar-brand" href="#"><img class="img-fluid navigation-soulvenicon" src="../images/soulven-logo.png" alt="Official Soulven Logo"></a>
-                <!-- Dropdown Button -->
+                <a id="logo" class="navbar-brand" href="../index.html" aria-label="Soulven homepage">
+                    <img class="img-fluid navigation-soulvenicon" src="../images/soulven-logo.png" alt="Official Soulven Logo">
+                </a>
                 <button id="hamburger" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
-                <!-- Navigation Links -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../index.html#showcases">SHOWCASE &nbsp;&nbsp;&nbsp;</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../index.html#games">WORLDS &nbsp;&nbsp;&nbsp;</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="../index.html#about">About &nbsp;&nbsp;&nbsp;</a>
-                        </li>
-                        <!--<li class="nav-item">
-                            <a class="nav-link" href="#team">Team</a>
-                        </li>-->
-                        <li class="nav-item">
-                            <a class="nav-link" href="../index.html#careers">Careers &nbsp;&nbsp;&nbsp;</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../index.html#contact">Press & Business </a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="../index.html#showcases">FEATURED</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../index.html#games">GAMES</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="../index.html#about">ABOUT</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../index.html#careers">CAREERS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../index.html#contact">PRESS & BUSINESS</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-    </header><!-- Header End -->
-    
-    <!-- /// Main Container /// -->
-    <div class="container">
-      
-            <!-- /// CONTACT SECTION /// -->
-            <div id="contact" class="large-margin" style="margin-top:140px; margin-bottom: 11rem;">
-                <a href="contact"></a><!-- Nav Anchor -->
-                <div class="row heading tiny-margin">
-                    <div class="col-md-auto">
-                        <h1 class="animation-element slide-down">JOIN <span class="colored">US</span></h1>
-                        <p>Join our Discord. Wishlist the game on Steam. Your voice matters and helps us continue.</p>
-                    </div>
-                </div>
-                <div class="">
-                    <div class="row small-margin">
-                        <div class="col-md-11">
-<div class="modal-footer" style="border-top:none; display: block;">
-  
-<!-- CTA Buttons -->
-<div class="d-flex flex-wrap align-items-center mt-3" style="gap:.75rem;">
-  <a href="https://discord.gg/ZmhCk9Wppu" target="_blank" rel="noopener" title="Join our Discord Community" class="btn btn-primary">
-    <img src="../images/favicon/favicon_discord.png" alt="" width="18" height="18" style="vertical-align:text-bottom; margin-right:.35rem;">Join our Discord ♥
-  </a>
-        <a href="https://store.steampowered.com/app/2577080/My_Dear_Emma/" target="_blank" rel="noopener" title="Visit our Steam Store Page" class="btn btn-primary" style="background: linear-gradient(to right, #75b022 5%, #588a1b 95%); border-color: transparent;">
-        <img src="../images/favicon/favicon_steam.ico" alt="" width="18" height="18" style="vertical-align:text-bottom; margin-right:.35rem;">
-        Wishlist on Steam ♥
-    </a>
-</div>
-</div>
-                            
+    </header>
+
+    <div class="floating-social-bar" aria-label="Soulven community, contact and social links">
+        <a class="floating-primary" target="_blank" rel="noopener" href="https://discord.gg/ZmhCk9Wppu" aria-label="Join the official Soulven Discord server">
+            <i class="fa fa-comments"></i>
+            <span class="floating-social-label">Discord</span>
+        </a>
+        <a href="mailto:hello@soulven.com?subject=Contact%20Soulven" aria-label="Contact Soulven by email">
+            <i class="fa fa-envelope"></i>
+            <span class="floating-social-label">Contact</span>
+        </a>
+        <a target="_blank" rel="noopener" href="https://www.youtube.com/@soulvengames" aria-label="Follow Soulven on YouTube">
+            <i class="fa fa-youtube-play"></i>
+            <span class="floating-social-label">YouTube</span>
+        </a>
+        <a target="_blank" rel="noopener" href="https://www.instagram.com/soulvengames/" aria-label="Follow Soulven on Instagram">
+            <i class="fa fa-instagram"></i>
+            <span class="floating-social-label">Instagram</span>
+        </a>
+        <a target="_blank" rel="noopener" href="https://www.tiktok.com/@soulvengames" aria-label="Follow Soulven on TikTok">
+            <i class="fa fa-music"></i>
+            <span class="floating-social-label">TikTok</span>
+        </a>
+        <a target="_blank" rel="noopener" href="https://bsky.app/profile/soulvengames.bsky.social" aria-label="Follow Soulven on Bluesky">
+            <span class="floating-icon-letter">B</span>
+            <span class="floating-social-label">Bluesky</span>
+        </a>
+        <a target="_blank" rel="noopener" href="https://x.com/devsoul6" aria-label="Follow Soulven on X">
+            <i class="fa fa-twitter"></i>
+            <span class="floating-social-label">X</span>
+        </a>
+    </div>
+
+    <main class="join-main">
+        <section class="join-hero" aria-labelledby="join-title">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <span class="section-kicker">Soulven Community</span>
+                        <h1 id="join-title">Join our journey and help <span class="colored">My Dear Emma</span> grow.</h1>
+                        <p class="join-lead">
+                            Get closer to our projects, meet the team and support our upcoming narrative adventure directly on Steam.
+                        </p>
+                        <div class="join-badge-row" aria-label="What you can do on this page">
+                            <span class="soulven-badge">Discord Community</span>
+                            <span class="soulven-badge">Steam Wishlist</span>
+                            <span class="soulven-badge">Indie Game Updates</span>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h1 class="animation-element slide-down">GET <span class="colored">IN TOUCH</span></h1>
-                            <div id="contact-info">
-                                <ul>
-                                    <li><i class="fa fa-envelope"></i><p>Email: <span class="colored"><script>var1="hello",var2="@",var3="soulven.com",document.write(var1+var2+var3);</script></span></p></li>
-                                    <li><i class="fa fa-map-marker"></i><p>Address: <span class="colored">Hanauer Landstr. 521, 60386, Frankfurt am Main</span></p></li>
-                                </ul>
+                    <div class="col-lg-5">
+                        <div class="join-highlight-card">
+                            <span class="join-card-label">Quick actions</span>
+                            <h2>Support Soulven in two clicks</h2>
+                            <p>
+                                Join the Discord to follow development and wishlist My Dear Emma on Steam to help the project become more visible.
+                            </p>
+                            <div class="join-cta-stack">
+                                <a href="https://discord.gg/ZmhCk9Wppu" target="_blank" rel="noopener" title="Join our Discord Community" class="join-cta join-cta-discord">
+                                    <img src="../images/favicon/favicon_discord.png" alt="" width="20" height="20">
+                                    Join our Discord ♥
+                                </a>
+                                <a href="https://store.steampowered.com/app/2577080/My_Dear_Emma/" target="_blank" rel="noopener" title="Visit our Steam Store Page" class="join-cta join-cta-steam">
+                                    <img src="../images/favicon/favicon_steam.ico" alt="" width="20" height="20">
+                                    Wishlist on Steam ♥
+                                </a>
                             </div>
+                            <p class="join-microcopy">Your wishlist and feedback make a real difference for a small indie studio.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        
-    </div><!-- Main Container End -->
-    <!-- /// FOOTER /// -->
+        </section>
+
+        <section class="container join-info-grid" aria-label="Why join Soulven">
+            <article class="join-info-card">
+                <div class="join-info-icon"><i class="fa fa-comments"></i></div>
+                <h2>Join the community</h2>
+                <p>Follow development updates, share feedback and talk with people who enjoy atmospheric, emotional and story-driven games.</p>
+            </article>
+            <article class="join-info-card">
+                <div class="join-info-icon"><i class="fa fa-steam"></i></div>
+                <h2>Wishlist My Dear Emma</h2>
+                <p>Wishlisting helps Steam understand that players care about the game and gives the project more visibility before release.</p>
+            </article>
+            <article class="join-info-card">
+                <div class="join-info-icon"><i class="fa fa-heart"></i></div>
+                <h2>Support our indie studio</h2>
+                <p>Soulven is building meaningful games with a small team. Every follow, wishlist and conversation helps us continue.</p>
+            </article>
+        </section>
+
+        <section class="container join-contact-section" aria-labelledby="join-contact-title">
+            <div class="row heading tiny-margin">
+                <div class="col-md-auto">
+                    <h1 id="join-contact-title" class="animation-element slide-down">GET <span class="colored">IN TOUCH</span></h1>
+                </div>
+                <div class="col"><hr class="animation-element extend"></div>
+            </div>
+            <div class="join-contact-card">
+                <div>
+                    <span class="section-kicker">Contact</span>
+                    <h2>Questions, press or business topics?</h2>
+                    <p>Reach out directly if you want to talk about Soulven, My Dear Emma, press material, partnerships or community topics.</p>
+                </div>
+                <ul class="join-contact-list">
+                    <li>
+                        <i class="fa fa-envelope"></i>
+                        <span>Email: <span class="colored"><script>var1="hello",var2="@",var3="soulven.com",document.write(var1+var2+var3);</script></span></span>
+                    </li>
+                    <li>
+                        <i class="fa fa-map-marker"></i>
+                        <span>Address: <span class="colored">Hanauer Landstr. 521, 60386 Frankfurt am Main</span></span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
     <footer id="main-footer">
-        <div id="footer"> 
+        <div id="footer">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <p id="copyright">&copy; Soulven GmbH <script>document.write(new Date().getFullYear());</script></p><!-- Copyright Text -->
-                        <ul class="social-links"> <!-- Social Media Icons -->
+                        <p id="copyright">&copy; Soulven GmbH <script>document.write(new Date().getFullYear());</script></p>
+                        <ul class="social-links">
                             <li><a href="../privacy.html">Your privacy</a></li>
                             <li><a href="../terms.html">Terms & Conditions</a></li>
                             <li><a href="../imprint.html">Imprint</a></li>
                         </ul>
                     </div>
                 </div>
-            </div><!-- Container End -->
+            </div>
         </div>
-    </footer><!-- Footer End -->
-    
-    <!-- //// SCRIPTS //// -->
+    </footer>
+
     <script src="../js/jquery-3.2.1.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
@@ -171,231 +213,168 @@
     <script src="../js/strider.js"></script>
 
     <script>
-    // Consent Mode Grundzustand (alles verweigert bis Zustimmung)
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied',
-        'functionality_storage': 'granted'  // notwendig für Grundfunktionen (z. B. Spracheinstellung)
-    });
-    </script>
-
-    <script>
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    })
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
     </script>
 
     <!-- set utm links for steam -->
     <script>
-    document.addEventListener("DOMContentLoaded", function () {
-    // Ziel-Link finden (Steam: My Dear Emma)
-    const steamLink = document.querySelector('a[href*="store.steampowered.com/app/2577080/My_Dear_Emma"]');
-    if (!steamLink) return;
+        document.addEventListener("DOMContentLoaded", function () {
+            // Ziel-Link finden (Steam: My Dear Emma)
+            const steamLink = document.querySelector('a[href*="store.steampowered.com/app/2577080/My_Dear_Emma"]');
+            if (!steamLink) return;
 
-    const hrefNow = steamLink.getAttribute("href");
-    const pageUrl  = window.location.href;
-    const pageQS   = window.location.search.toLowerCase();
-    const pageHash = window.location.hash.toLowerCase();
+            const hrefNow = steamLink.getAttribute("href");
+            const pageUrl  = window.location.href;
+            const pageQS   = window.location.search.toLowerCase();
+            const pageHash = window.location.hash.toLowerCase();
 
-    // Schon vorhandene UTM am Link? -> Dann nichts tun (verhindert Doppelanhang)
-    if (/[?&]utm_source=/i.test(hrefNow)) return;
+            // Schon vorhandene UTM am Link? -> Dann nichts tun (verhindert Doppelanhang)
+            if (/[?&]utm_source=/i.test(hrefNow)) return;
 
-    // Welche Kampagne?
-    let utm = "";
-    if (pageQS.includes("?utm_source=reddit")) {
-        utm = "utm_source=reddit&utm_medium=cpc&utm_campaign=website-join-reddit";
-    } else if (pageHash.includes("#meta")) {
-        utm = "utm_source=meta&utm_medium=cpc&utm_campaign=website-join-meta";
-    } else if (pageHash.includes("#google")) {
-        utm = "utm_source=google&utm_medium=cpc&utm_campaign=website-join-google";
-    } else if (pageHash.includes("#tiktok")) {
-        utm = "utm_source=tiktok&utm_medium=cpc&utm_campaign=website-join-tiktok";
-    } else {
-        utm = "utm_source=website&utm_medium=button&utm_campaign=mde_joinpage";
-    }
+            // Welche Kampagne?
+            let utm = "";
+            if (pageQS.includes("?utm_source=reddit")) {
+                utm = "utm_source=reddit&utm_medium=cpc&utm_campaign=website-join-reddit";
+            } else if (pageHash.includes("#meta")) {
+                utm = "utm_source=meta&utm_medium=cpc&utm_campaign=website-join-meta";
+            } else if (pageHash.includes("#google")) {
+                utm = "utm_source=google&utm_medium=cpc&utm_campaign=website-join-google";
+            } else if (pageHash.includes("#tiktok")) {
+                utm = "utm_source=tiktok&utm_medium=cpc&utm_campaign=website-join-tiktok";
+            } else {
+                utm = "utm_source=website&utm_medium=button&utm_campaign=mde_joinpage";
+            }
 
-    if (!utm) return; // keine passende Bedingung -> nichts ändern
+            if (!utm) return; // keine passende Bedingung -> nichts ändern
 
-    // Korrektes Trennzeichen wählen
-    const joiner = hrefNow.includes("?") ? "&" : "?";
-    steamLink.setAttribute("href", hrefNow + joiner + utm);
-    });
+            // Korrektes Trennzeichen wählen
+            const joiner = hrefNow.includes("?") ? "&" : "?";
+            steamLink.setAttribute("href", hrefNow + joiner + utm);
+        });
     </script>
     <!-- set utm links for steam end -->
 
-
-    <!-- COOKIE CONSENTS -->
-    <style>
-    .cookie-banner {
-        position: fixed; left: 0; right: 0; bottom: 0; z-index: 9999;
-        background: #0f1221; color: #fff; padding: 16px;
-        box-shadow: 0 -8px 24px rgba(0,0,0,.35);
-        display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: nowrap;
-    }
-    .cookie-banner p { margin: 0; line-height: 1.4; max-width: 720px; }
-    .cookie-actions { display: flex; gap: 15px; margin-left: auto; }
-    .cookie-btn {
-        border: 0; padding: 10px 16px; cursor: pointer; border-radius: 8px; font-weight: 600;
-    }
-    .cookie-accept { background: #3fb950; color: #0b2412; }
-    .cookie-decline { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.3); }
-    .cookie-link { color: #8ab4ff; text-decoration: underline; }
-    </style>
-
     <div id="cookie-banner" class="cookie-banner" style="display:none;">
-    <p>
-        By allowing cookies, you help us understand how players find and wishlist our games on Steam. This insight supports us in building better content and experiences for the community.
-        You can read more in our <a class="cookie-link" href="../privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.
-    </p>
-    <div class="cookie-actions">
-        <button id="cookie-decline" class="cookie-btn cookie-decline" aria-label="Decline">Decline</button>
-        <button id="cookie-accept" class="cookie-btn cookie-accept" aria-label="Accept all">Accept</button>
-    </div>
+        <p>
+            By allowing cookies, you help us understand how players find and wishlist our games on Steam. This insight supports us in building better content and experiences for the community.
+            You can read more in our <a class="cookie-link" href="../privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.
+        </p>
+        <div class="cookie-actions">
+            <button id="cookie-decline" class="cookie-btn cookie-decline" aria-label="Decline">Decline</button>
+            <button id="cookie-accept" class="cookie-btn cookie-accept" aria-label="Accept all">Accept</button>
+        </div>
     </div>
 
     <script>
-    // === Config: Deine GTM-ID hier eintragen ===
-    const GTM_ID = "GTM-WWQHNJD9";
+        const GTM_ID = "GTM-WWQHNJD9";
 
-    function loadGTM(id) {
-        console.log("[CookieConsent] Lade Google Tag Manager mit ID:", id);
-        // dataLayer init
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        function loadGTM(id) {
+            console.log("[CookieConsent] Lade Google Tag Manager mit ID:", id);
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
 
-        // Script inject
-        var gtmScript = document.createElement('script');
-        gtmScript.async = true;
-        gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=' + encodeURIComponent(id);
-        document.head.appendChild(gtmScript);
-    }
-
-    function showBanner() {
-        var banner = document.getElementById('cookie-banner');
-        if (banner) {
-        banner.style.display = 'flex';
-        console.log("[CookieConsent] Banner eingeblendet (keine Zustimmung gefunden).");
-        }
-    }
-
-    function hideBanner() {
-        var banner = document.getElementById('cookie-banner');
-        if (banner) banner.style.display = 'none';
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-        const consent = localStorage.getItem('cookie_consent');
-
-        if (consent === 'granted') {
-        console.log("[CookieConsent] Bereits gespeicherte Zustimmung gefunden → GTM wird geladen.");
-        gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
-        });
-        loadGTM(GTM_ID);
-        } else {
-        console.log("[CookieConsent] Keine Zustimmung gespeichert → Banner wird angezeigt.");
-        showBanner();
+            var gtmScript = document.createElement('script');
+            gtmScript.async = true;
+            gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=' + encodeURIComponent(id);
+            document.head.appendChild(gtmScript);
         }
 
-        document.getElementById('cookie-accept')?.addEventListener('click', function () {
-        localStorage.setItem('cookie_consent', 'granted');
-        hideBanner();
+        function showBanner() {
+            var banner = document.getElementById('cookie-banner');
+            if (banner) {
+                banner.style.display = 'flex';
+                console.log("[CookieConsent] Banner eingeblendet (keine Zustimmung gefunden).");
+            }
+        }
 
-        console.log("[CookieConsent] User hat zugestimmt → Consent Mode 'granted', GTM wird geladen.");
+        function hideBanner() {
+            var banner = document.getElementById('cookie-banner');
+            if (banner) banner.style.display = 'none';
+        }
 
-        gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        document.addEventListener('DOMContentLoaded', function () {
+            const consent = localStorage.getItem('cookie_consent');
+
+            if (consent === 'granted') {
+                console.log("[CookieConsent] Bereits gespeicherte Zustimmung gefunden → GTM wird geladen.");
+                gtag('consent', 'update', {
+                    'ad_storage': 'granted',
+                    'ad_user_data': 'granted',
+                    'ad_personalization': 'granted',
+                    'analytics_storage': 'granted'
+                });
+                loadGTM(GTM_ID);
+            } else {
+                console.log("[CookieConsent] Keine Zustimmung gespeichert → Banner wird angezeigt.");
+                showBanner();
+            }
+
+            document.getElementById('cookie-accept')?.addEventListener('click', function () {
+                localStorage.setItem('cookie_consent', 'granted');
+                hideBanner();
+
+                console.log("[CookieConsent] User hat zugestimmt → Consent Mode 'granted', GTM wird geladen.");
+
+                gtag('consent', 'update', {
+                    'ad_storage': 'granted',
+                    'ad_user_data': 'granted',
+                    'ad_personalization': 'granted',
+                    'analytics_storage': 'granted'
+                });
+
+                loadGTM(GTM_ID);
+            });
+
+            document.getElementById('cookie-decline')?.addEventListener('click', function () {
+                hideBanner();
+                console.log("[CookieConsent] User hat abgelehnt → Consent Mode bleibt 'denied'.");
+
+                gtag('consent', 'update', {
+                    'ad_storage': 'denied',
+                    'ad_user_data': 'denied',
+                    'ad_personalization': 'denied',
+                    'analytics_storage': 'denied'
+                });
+            });
         });
-
-        loadGTM(GTM_ID);
-        });
-
-        document.getElementById('cookie-decline')?.addEventListener('click', function () {
-        hideBanner();
-        console.log("[CookieConsent] User hat abgelehnt → Consent Mode bleibt 'denied'.");
-
-        gtag('consent', 'update', {
-            'ad_storage': 'denied',
-            'ad_user_data': 'denied',
-            'ad_personalization': 'denied',
-            'analytics_storage': 'denied'
-        });
-        });
-    });
     </script>
-    <!-- COOKIE CONSENTS END -->
-
-
-
-    <!-- COOKIE Banner & FOOTER OVERLAP FIX -->
 
     <script>
-    (function () {
-    const footer = document.getElementById('main-footer');
-    const banner = document.getElementById('cookie-banner');
-    const btnAccept = document.getElementById('cookie-accept');
-    const btnDecline = document.getElementById('cookie-decline');
+        (function () {
+            const footer = document.getElementById('main-footer');
+            const banner = document.getElementById('cookie-banner');
+            const btnAccept = document.getElementById('cookie-accept');
+            const btnDecline = document.getElementById('cookie-decline');
 
-    if (!footer || !banner) return;
+            if (!footer || !banner) return;
 
-    // Hilfsfunktion: prüft, ob Banner sichtbar ist
-    function isBannerVisible() {
-        return banner.style.display !== 'none' && getComputedStyle(banner).display !== 'none';
-    }
+            function isBannerVisible() {
+                return banner.style.display !== 'none' && getComputedStyle(banner).display !== 'none';
+            }
 
-    // Setzt bottom auf Banner-Höhe (oder 0)
-    function updateFooterOffset() {
-        if (!footer) return;
-        const offset = isBannerVisible() ? Math.ceil(banner.getBoundingClientRect().height) : 0;
-        footer.style.paddingBottom = offset + 'px';
-    }
+            function updateFooterOffset() {
+                const offset = isBannerVisible() ? Math.ceil(banner.getBoundingClientRect().height) : 0;
+                footer.style.paddingBottom = offset + 'px';
+            }
 
-    // Debounce für Resize
-    let resizeTimer;
-    function onResize() {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(updateFooterOffset, 100);
-    }
+            let resizeTimer;
+            function onResize() {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(updateFooterOffset, 100);
+            }
 
-    // Beobachte Änderungen am Banner (z. B. wenn per JS ein-/ausgeblendet)
-    const mo = new MutationObserver(updateFooterOffset);
-    mo.observe(banner, { attributes: true, attributeFilter: ['style', 'class'] });
+            const mo = new MutationObserver(updateFooterOffset);
+            mo.observe(banner, { attributes: true, attributeFilter: ['style', 'class'] });
 
-    // Klickevents: nach Auswahl Banner weg -> Footer zurücksetzen
-    btnAccept && btnAccept.addEventListener('click', () => {
-        // Warte minimal, bis Banner ausgeblendet wurde
-        setTimeout(updateFooterOffset, 0);
-    });
-    btnDecline && btnDecline.addEventListener('click', () => {
-        setTimeout(updateFooterOffset, 0);
-    });
+            btnAccept && btnAccept.addEventListener('click', () => setTimeout(updateFooterOffset, 0));
+            btnDecline && btnDecline.addEventListener('click', () => setTimeout(updateFooterOffset, 0));
 
-    // Reagiere auf Fenstergröße
-    window.addEventListener('resize', onResize);
-
-    // Initial aufrufen, sobald DOM bereit ist
-    document.addEventListener('DOMContentLoaded', updateFooterOffset);
-
-    // Falls dein Code den Banner später einblendet:
-    window.addEventListener('load', updateFooterOffset);
-    })();
+            window.addEventListener('resize', onResize);
+            document.addEventListener('DOMContentLoaded', updateFooterOffset);
+            window.addEventListener('load', updateFooterOffset);
+        })();
     </script>
-
-
-    <!-- COOCKIE Banner & FOOTER OVERLAP FIX END-->
-
-
-
 </body>
-
 </html>

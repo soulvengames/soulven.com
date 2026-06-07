@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- META TAGS -->
-    <meta charset="utf-8">
-    <meta name="author" content="Soulven GmbH">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
-     
-    <!-- Consent Mode Grundzustand -->
-    <script>
+<meta charset="utf-8">
+<meta name="author" content="Soulven GmbH">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('consent', 'default', {
@@ -17,687 +14,396 @@
         'analytics_storage': 'denied',
         'functionality_storage': 'granted'
         });
-    </script>
-    
-    <!-- WEBSITE TITLE & DESCRIPTION -->
-    <title>Soulven - Soul-Driven Games, Real-Time 3D and Software Development</title>
-    <meta name="description" content="Soulven is an independent game, real-time 3D and software development studio based in Frankfurt am Main, Germany. We create emotionally meaningful games and reliable digital products with a soul-driven, invention-led mindset.">
-    <meta name="keywords" content="Soulven, indie game studio, game development, Unreal Engine, Unity, real-time 3D, software development, simulations, Frankfurt, My Dear Emma, Persevera, Absinth">
-    <!-- Favicon and Apple Icons -->
-    <link rel="shortcut icon" href="./images/favicon/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon.png" />
-    <link rel="apple-touch-icon" sizes="57x57" href="./images/favicon/apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="./images/favicon/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="./images/favicon/apple-touch-icon-76x76.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="./images/favicon/apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="./images/favicon/apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="./images/favicon/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="./images/favicon/apple-touch-icon-152x152.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon-180x180.png" />
-
-    <!-- STYLES -->
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- FontAwesome -->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <!-- Animations -->
-    <link href="css/animations.css" rel="stylesheet">
-    <!-- Animation repository for morhpext -->
-    <link href="css/animate.css" rel="stylesheet">
-    <!-- Text Animator morphext -->
-    <link href="css/morphext.css" rel="stylesheet">
-    <!-- Lightbox -->
-    <link href="css/lightbox.min.css" rel="stylesheet">
-    <!-- Video Lightbox -->
-    <link href="css/modal-video.min.css" rel="stylesheet">
-    <!-- Main Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-
-    <!-- Homepage polish: stronger positioning, typography and section rhythm -->
+    </script><title>Soulven - Soul-Driven Games, Real-Time 3D and Software Development</title>
+<meta name="description" content="Soulven is an independent game, real-time 3D and software development studio based in Frankfurt am Main, Germany. We create emotionally meaningful games and reliable digital products with a soul-driven, invention-led mindset.">
+<meta name="keywords" content="Soulven, indie game studio, game development, Unreal Engine, Unity, real-time 3D, software development, simulations, Frankfurt, My Dear Emma, Persevera, Absinth">
+<link rel="shortcut icon" href="./images/favicon/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="57x57" href="./images/favicon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="72x72" href="./images/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="./images/favicon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="./images/favicon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="./images/favicon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="./images/favicon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="./images/favicon/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon-180x180.png">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/animations.css" rel="stylesheet">
+<link href="css/animate.css" rel="stylesheet">
+<link href="css/morphext.css" rel="stylesheet">
+<link href="css/lightbox.min.css" rel="stylesheet">
+<link href="css/modal-video.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div id="loader-wrapper">
-        <h1 class="loader-logo"><img class="img-fluid" src="images/soulven-logo.png" alt="Official Soulven Logo"></h1>
-        <div id="progress"></div>
-        <h3 class="loader-text">LOADING</h3>
-    </div>
-    
-    <!-- //// HEADER //// -->
-    <header id="main-header">
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
-            <div class="container">
-                <!-- Site Logo -->
-                <a id="logo" class="navbar-brand" href="#"><img class="img-fluid navigation-soulvenicon" src="images/soulven-logo.png" alt="Official Soulven Logo"></a>
-                <!-- Dropdown Button -->
-                <button id="hamburger" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                </button>
-                <!-- Navigation Links -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#showcases">FEATURED &nbsp;&nbsp;&nbsp;</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#games">GAMES &nbsp;&nbsp;&nbsp;</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#about">ABOUT &nbsp;&nbsp;&nbsp;</a>
-                        </li>
-                        <!--<li class="nav-item">
-                            <a class="nav-link" href="#team">Team</a>
-                        </li>-->
-                        <li class="nav-item">
-                            <a class="nav-link" href="#careers">CAREERS &nbsp;&nbsp;&nbsp;</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">PRESS & BUSINESS </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header><!-- Header End -->
-
-    <!-- /// FLOATING COMMUNITY BAR /// -->
-    <div class="floating-social-bar" aria-label="Soulven community, contact and social links">
-        <a class="floating-primary" target="_blank" rel="noopener" href="https://discord.gg/ZmhCk9Wppu" aria-label="Join the official Soulven Discord server">
-            <i class="fa fa-comments"></i>
-            <span class="floating-social-label">Discord</span>
-        </a>
-        <a href="mailto:hello@soulven.com?subject=Contact%20Soulven" aria-label="Contact Soulven by email">
-            <i class="fa fa-envelope"></i>
-            <span class="floating-social-label">Contact</span>
-        </a>
-        <a target="_blank" rel="noopener" href="https://www.youtube.com/@soulvengames" aria-label="Follow Soulven on YouTube">
-            <i class="fa fa-youtube-play"></i>
-            <span class="floating-social-label">YouTube</span>
-        </a>
-        <a target="_blank" rel="noopener" href="https://www.instagram.com/soulvengames/" aria-label="Follow Soulven on Instagram">
-            <i class="fa fa-instagram"></i>
-            <span class="floating-social-label">Instagram</span>
-        </a>
-        <a target="_blank" rel="noopener" href="https://www.tiktok.com/@soulvengames" aria-label="Follow Soulven on TikTok">
-            <i class="fa fa-music"></i>
-            <span class="floating-social-label">TikTok</span>
-        </a>
-        <a target="_blank" rel="noopener" href="https://bsky.app/profile/soulvengames.bsky.social" aria-label="Follow Soulven on Bluesky">
-            <span class="floating-icon-letter">B</span>
-            <span class="floating-social-label">Bluesky</span>
-        </a>
-        <a target="_blank" rel="noopener" href="https://x.com/devsoul6" aria-label="Follow Soulven on X">
-            <i class="fa fa-twitter"></i>
-            <span class="floating-social-label">X</span>
-        </a>
-    </div>
-
-    
-    <!-- /// HERO SECTION /// -->
-    <div id="hero-section" class="small-margin">
-        <div class="row hero-unit">
-            <div class="col-xl-5 col-md-12">
-                <div class="hero-caption"><!-- Main Tagline -->
-                    <span class="eyebrow">Independent — Meaningful — Memorable</span>
-                    <h1>Where ideas become worlds that truly matter.<br><span id="moving-text" class="colored" style="font-size: 2.5rem;">Game Development, Real-Time 3D Experiences, Software Solutions</span></h1>
-                    <p class="hero-subline">Soulven creates meaningful games and reliable digital products through creative vision, technical excellence and strong execution.</p>
-                    <div class="hero-actions">
-                        <a class="primary" href="#showcases">Discover My Dear Emma</a>
-                        <a class="secondary" href="#contact">Press & Business</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-7 col-md-12">
-                <div id="hero-slider" class="carousel slide carousel-fade" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item ">
-                            <img src="images/MyDearEmma-800x690.jpg" class="d-block w-100" alt="img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/persevera-game-conceptart.jpg" class="d-block w-100" alt="img">
-                        </div>
-                        <div class="carousel-item active">
-                          <img src="images/absinth-game_gameplay4.jpg" class="d-block w-100" alt="img">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div><!-- Hero Section End -->
-    
-    <!-- /// Main Container /// -->
-    <div class="container">
-        <!-- /// IN DEVELOPMENT /// -->
-        <div id="showcases" class="large-margin">
-            <a href="showcases"></a><!-- Nav Anchor -->
-            <div class="row heading tiny-margin">
-                <div class="col-md-auto">
-                    <h1 class="animation-element slide-down">FEATURED <span class="colored">PROJECT</span></h1>
-                </div>
-                <div class="col">
-                    <hr class="animation-element extend">
-                </div>
-            </div>
-            <div class="section-lead-panel">
-                <span class="section-kicker">Current Focus</span>
-                <p class="section-intro">Our featured project brings together the heart of Soulven: emotional storytelling, atmospheric worldbuilding and modern real-time technology.</p>
-            </div>
-            <div>
-                <!-- Game Card Video -->
-                <div class="row game-card project-card featured-project-card pc new">
-                    <div class="col-lg-12 col-xl-5 game-card-left">
-                         <a target="_blank" title="External Link to Youtube" href="https://www.youtube.com/watch?v=XF2VSHSdlLg"> <!-- Video link goes here -->
-                            <div class="overlay video-overlay" data-label="Watch teaser">
-                                <i class="fa fa-play"></i>
-                            </div>
-                            <img src="images/MyDearEmma_Logo19-noborders.jpg" data-src="images/MyDearEmma_Logo19-noborders.jpg" class="img-fluid b-lazy" alt="video thumbnail"> <!-- Video Thumbnail Img -->
-                        </a>
-                        </div>
-                    <div class="col-lg-12 col-xl-7 game-card-right">
-                        <div class="project-card-header">
-                            <h2><img height="50" src="./images/MyDearEmma_Logo.jpg" alt="My Dear Emma logo"> My Dear Emma</h2>
-                            <span class="project-status-badge"><span class="status-dot"></span><span id="mde-release-status">In Development</span></span>
-                        </div>
-                        <div class="badge-row" aria-label="Project tags">
-                            <span class="soulven-badge">Narrative Adventure</span>
-                            <span class="soulven-badge">Exploration</span>
-                            <span class="soulven-badge">Puzzle</span>
-                            <span class="soulven-badge">PC</span>
-                        </div>
-                        <p class="game-description">My Dear Emma is a relaxed first-person narrative adventure about Emma, a biologist and nature photographer, who returns to her grandparents’ estate after her grandfather has passed away. Guided by a notebook, a map and a final scavenger hunt, players uncover childhood memories, family secrets and the question of what Emma truly wants her life to become.</p>
-                        <div class="action-row">
-                            <a class="soulven-cta primary" target="_blank" rel="noopener" href="https://store.steampowered.com/app/2577080/My_Dear_Emma/?utm_source=website&utm_medium=button&utm_campaign=mde_homepage">
-                                <i class="fa fa-steam"></i>
+<div id="loader-wrapper">
+<h1 class="loader-logo"><img class="img-fluid" src="images/soulven-logo.png" alt="Official Soulven Logo"></h1>
+<div id="progress"></div>
+<h3 class="loader-text">LOADING</h3>
+</div>
+<header id="main-header"><nav class="navbar fixed-top navbar-expand-lg navbar-dark"><div class="container">
+<a id="logo" class="navbar-brand" href="#"><img class="img-fluid navigation-soulvenicon" src="images/soulven-logo.png" alt="Official Soulven Logo"></a><button id="hamburger" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav ml-auto">
+<li class="nav-item"><a class="nav-link" href="#showcases">FEATURED</a></li>
+<li class="nav-item"><a class="nav-link" href="#games">GAMES</a></li>
+<li class="nav-item active"><a class="nav-link" href="#about">ABOUT</a></li>
+<li class="nav-item"><a class="nav-link" href="#careers">CAREERS</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">PRESS &amp; BUSINESS</a></li>
+</ul></div>
+</div></nav></header><div class="floating-social-bar" aria-label="Soulven community, contact and social links">
+<a class="floating-primary" target="_blank" rel="noopener" href="https://discord.gg/ZmhCk9Wppu" aria-label="Join the official Soulven Discord server"><i class="fa fa-comments"></i><span class="floating-social-label">Discord</span></a><a href="mailto:hello@soulven.com?subject=Contact%20Soulven" aria-label="Contact Soulven by email"><i class="fa fa-envelope"></i><span class="floating-social-label">Contact</span></a><a target="_blank" rel="noopener" href="https://www.youtube.com/@soulvengames" aria-label="Follow Soulven on YouTube"><i class="fa fa-youtube-play"></i><span class="floating-social-label">YouTube</span></a><a target="_blank" rel="noopener" href="https://www.instagram.com/soulvengames/" aria-label="Follow Soulven on Instagram"><i class="fa fa-instagram"></i><span class="floating-social-label">Instagram</span></a><a target="_blank" rel="noopener" href="https://www.tiktok.com/@soulvengames" aria-label="Follow Soulven on TikTok"><i class="fa fa-music"></i><span class="floating-social-label">TikTok</span></a><a target="_blank" rel="noopener" href="https://bsky.app/profile/soulvengames.bsky.social" aria-label="Follow Soulven on Bluesky"><span class="floating-icon-letter">B</span><span class="floating-social-label">Bluesky</span></a><a target="_blank" rel="noopener" href="https://x.com/devsoul6" aria-label="Follow Soulven on X"><i class="fa fa-twitter"></i><span class="floating-social-label">X</span></a>
+</div>
+<div id="hero-section" class="small-margin"><div class="row hero-unit">
+<div class="col-xl-5 col-md-12"><div class="hero-caption">
+<span class="eyebrow">Independent — Meaningful — Memorable</span><h1>Where ideas become worlds that truly matter.<br><span id="moving-text" class="colored" style="font-size: 2.5rem;">Game Development, Real-Time 3D Experiences, Software Solutions</span>
+</h1>
+<p class="hero-subline">Soulven creates meaningful games and reliable digital products through creative vision, technical excellence and strong execution.</p>
+<div class="hero-actions">
+<a class="primary" href="#showcases">Discover My Dear Emma</a><a class="secondary" href="#contact">Press &amp; Business</a>
+</div>
+</div></div>
+<div class="col-xl-7 col-md-12"><div id="hero-slider" class="carousel slide carousel-fade" data-ride="carousel"><div class="carousel-inner">
+<div class="carousel-item"><img src="images/MyDearEmma-800x690.jpg" class="d-block w-100" alt="MyDearEmma 800x690"></div>
+<div class="carousel-item"><img src="images/persevera-game-conceptart.jpg" class="d-block w-100" alt="Persevera game conceptart"></div>
+<div class="carousel-item active"><img src="images/absinth-game_gameplay4.jpg" class="d-block w-100" alt="Absinth game gameplay4"></div>
+</div></div></div>
+</div></div>
+<div class="container">
+<div id="showcases" class="large-margin">
+<div class="row heading tiny-margin">
+<div class="col-md-auto"><h1 class="animation-element slide-down">FEATURED <span class="colored">PROJECT</span>
+</h1></div>
+<div class="col"><hr class="animation-element extend"></div>
+</div>
+<div class="section-lead-panel">
+<span class="section-kicker">Current Focus</span><p class="section-intro">Our featured project brings together the heart of Soulven: emotional storytelling, atmospheric worldbuilding and modern real-time technology.</p>
+</div>
+<div class="row game-card project-card featured-project-card pc new">
+<div class="col-lg-12 col-xl-5 game-card-left"><a target="_blank" title="External Link to Youtube" href="https://www.youtube.com/watch?v=XF2VSHSdlLg" rel="noopener"><div class="overlay video-overlay" data-label="Watch teaser"><i class="fa fa-play"></i></div>
+<img src="images/MyDearEmma_Logo19-noborders.jpg" data-src="images/MyDearEmma_Logo19-noborders.jpg" class="img-fluid b-lazy" alt="video thumbnail"></a></div>
+<div class="col-lg-12 col-xl-7 game-card-right">
+<div class="project-card-header">
+<h2>
+<img height="50" src="./images/MyDearEmma_Logo.jpg" alt="My Dear Emma logo"> My Dear Emma</h2>
+<span class="project-status-badge"><span class="status-dot"></span><span id="mde-release-status">In Development</span></span>
+</div>
+<div class="badge-row" aria-label="Project tags">
+<span class="soulven-badge">Narrative Adventure</span><span class="soulven-badge">Exploration</span><span class="soulven-badge">Puzzle</span><span class="soulven-badge">PC</span>
+</div>
+<p class="game-description">My Dear Emma is a relaxed first-person narrative adventure about Emma, a biologist and nature photographer, who returns to her grandparents’ estate after her grandfather has passed away. Guided by a notebook, a map and a final scavenger hunt, players uncover childhood memories, family secrets and the question of what Emma truly wants her life to become.</p>
+<div class="action-row">
+<a class="soulven-cta primary" target="_blank" rel="noopener" href="https://store.steampowered.com/app/2577080/My_Dear_Emma/?utm_source=website&amp;utm_medium=button&amp;utm_campaign=mde_homepage"><i class="fa fa-steam"></i>
                                 Add to Wishlist
-                            </a>
-                            <a class="soulven-cta secondary" target="_blank" rel="noopener" href="https://store.steampowered.com/app/4345540/My_Dear_Emma_Prologue/?utm_source=website&utm_medium=button&utm_campaign=mde_homepage">
-                                <i class="fa fa-gamepad"></i>
+                            </a><a class="soulven-cta secondary" target="_blank" rel="noopener" href="https://store.steampowered.com/app/4345540/My_Dear_Emma_Prologue/?utm_source=website&amp;utm_medium=button&amp;utm_campaign=mde_homepage"><i class="fa fa-gamepad"></i>
                                 Play Prologue
-                            </a>
-                            <a class="soulven-cta ghost" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=XF2VSHSdlLg">
-                                <i class="fa fa-youtube-play"></i>
+                            </a><a class="soulven-cta ghost" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=XF2VSHSdlLg"><i class="fa fa-youtube-play"></i>
                                 Watch Teaser
                             </a>
-                        </div>
-
-                    </div>
-                </div><!-- Game Card End -->
-
-            </div>
-        </div>
-        <!-- /// COMMUNITY SECTION /// -->
-        <div id="community" class="large-margin">
-            <a href="community"></a><!-- Nav Anchor -->
-            <div class="row heading tiny-margin">
-                <div class="col-md-auto">
-                    <h1 class="animation-element slide-down">JOIN <span class="colored">US</span></h1>
-                </div>
-                <div class="col">
-                    <hr class="animation-element extend">
-                </div>
-            </div>
-            <div class="">
-                <div class="row small-margin">
-                    <div class="col-md-11">
-                        <div class="community-card">
-                            <span class="section-kicker">Community</span>
-                            <h2>Follow the journey behind our worlds.</h2>
-                            <p>Get closer to our projects with development updates, early impressions and direct conversations with the team.</p>
-                            <div class="community-actions">
-                                <a class="community-discord-button" target="_blank" rel="noopener" title="Join the official Soulven Discord server" href="https://discord.gg/ZmhCk9Wppu">
-                                    <i class="fa fa-comments"></i>
+</div>
+</div>
+</div>
+</div>
+<div id="community" class="large-margin">
+<div class="row heading tiny-margin">
+<div class="col-md-auto"><h1 class="animation-element slide-down">JOIN <span class="colored">US</span>
+</h1></div>
+<div class="col"><hr class="animation-element extend"></div>
+</div>
+<div class="row small-margin"><div class="col-md-11"><div class="community-card">
+<span class="section-kicker">Community</span><h2>Follow the journey behind our worlds.</h2>
+<p>Get closer to our projects with development updates, early impressions and direct conversations with the team.</p>
+<div class="community-actions"><a class="community-discord-button" target="_blank" rel="noopener" title="Join the official Soulven Discord server" href="https://discord.gg/ZmhCk9Wppu"><i class="fa fa-comments"></i>
                                     Join our Discord
-                                </a>
-                            </div>
-                            <div class="social-follow">
-                                <span class="social-follow-label">Follow Soulven</span>
-                                <div class="social-follow-links">
-                                    <a target="_blank" rel="noopener" href="https://www.youtube.com/@soulvengames">YouTube</a>
-                                    <a target="_blank" rel="noopener" href="https://bsky.app/profile/soulvengames.bsky.social">Bluesky</a>
-                                    <a target="_blank" rel="noopener" href="https://www.instagram.com/soulvengames/">Instagram</a>
-                                    <a target="_blank" rel="noopener" href="https://www.tiktok.com/@soulvengames">TikTok</a>
-                                    <a target="_blank" rel="noopener" href="https://x.com/devsoul6">X</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-                
-        <div id="games" class="large-margin">
-            <a href="games"></a><!-- Nav Anchor -->
-            <div class="row heading tiny-margin">
-                <div class="col-md-auto">
-                    <h1 class="animation-element slide-down">OUR <span class="colored">GAMES</span></h1>
-                </div>
-                <div class="col">
-                    <hr class="animation-element extend">
-                </div>
-            </div>
-            <div class="row ">
-                <div class="col-md-11 small-margin">
-                   <div class="section-lead-panel compact">
-                       <span class="section-kicker">Portfolio</span>
-                       <p class="section-intro">A selection of Soulven projects, from released horror experiences to prototypes and showcases. Each project explores a different tone, but all share our focus on atmosphere, player emotion and carefully built interactive spaces.</p>
-                   </div>
-                </div>
-                <!--<div class="col-md-12">
-                    <ul class="game-tags">
-                        <li>Sort By Tag :</li>
-                        <li><a href="#" data-filter=".new">NEW</a></li>
-                        <li><a href="#" data-filter="*">ALL</a></li>
-                        <li><a href="#" data-filter=".pc">PC</a></li>
-                        <li><a href="#" data-filter=".mobile">MOBILE</a></li>
-                    </ul>
-                </div>-->
-            </div>
-            <div class="games-portfolio ">  
-                <!-- Game Card Video -->
-                <div class="row game-card project-card pc new">
-                    <div class="col-lg-12 col-xl-5 game-card-left">
-                        <a target="_blank" title="External Link to Youtube" href="https://www.youtube.com/watch?v=XJE9QAUwcos"> <!-- Video link goes here -->
-                            <div class="overlay video-overlay" data-label="Watch trailer">
-                                <i class="fa fa-play"></i>
-                            </div>
-                            <img src="images/persevera-game-conceptart.jpg" data-src="images/persevera-game-conceptart.jpg" class="img-fluid b-lazy" alt="video thumbnail"> <!-- Video Thumbnail Img -->
-                        </a>
-                    </div>
-                    <div class="col-lg-12 col-xl-7 game-card-right">
-                        <div class="project-card-header">
-                            <h2>PERSEVERA PT</h2>
-                            <span class="project-status-badge"><span class="status-dot"></span>Showcase Available</span>
-                        </div>
-                        <div class="badge-row" aria-label="Project tags">
-                            <span class="soulven-badge">Psychological Thriller</span>
-                            <span class="soulven-badge">Prototype</span>
-                            <span class="soulven-badge">PC</span>
-                        </div>
-                        <p class="game-description">PERSEVERA is a psychological thriller prototype set around a disturbing relationship between obsession, control and a life purpose forced onto someone else. The showcase invites players into the remnants of a former research facility, where atmosphere and environmental storytelling reveal the consequences of a mother’s fanatical vision.</p>
-                        <div class="action-row">
-                            <a class="soulven-cta primary" target="_blank" rel="noopener" href="https://store.steampowered.com/app/2567070/PERSEVERA/?utm_source=website&utm_medium=button&utm_campaign=persevera_homepage">
-                                <i class="fa fa-steam"></i>
+                                </a></div>
+<div class="social-follow">
+<span class="social-follow-label">Follow Soulven</span><div class="social-follow-links">
+<a target="_blank" rel="noopener" href="https://www.youtube.com/@soulvengames">YouTube</a><a target="_blank" rel="noopener" href="https://bsky.app/profile/soulvengames.bsky.social">Bluesky</a><a target="_blank" rel="noopener" href="https://www.instagram.com/soulvengames/">Instagram</a><a target="_blank" rel="noopener" href="https://www.tiktok.com/@soulvengames">TikTok</a><a target="_blank" rel="noopener" href="https://x.com/devsoul6">X</a>
+</div>
+</div>
+</div></div></div>
+</div>
+<div id="games" class="large-margin">
+<div class="row heading tiny-margin">
+<div class="col-md-auto"><h1 class="animation-element slide-down">OUR <span class="colored">GAMES</span>
+</h1></div>
+<div class="col"><hr class="animation-element extend"></div>
+</div>
+<div class="row"><div class="col-md-11 small-margin"><div class="section-lead-panel compact">
+<span class="section-kicker">Portfolio</span><p class="section-intro">A selection of Soulven projects, from released horror experiences to prototypes and showcases. Each project explores a different tone, but all share our focus on atmosphere, player emotion and carefully built interactive spaces.</p>
+</div></div></div>
+<div class="games-portfolio">
+<div class="row game-card project-card pc new">
+<div class="col-lg-12 col-xl-5 game-card-left"><a target="_blank" title="External Link to Youtube" href="https://www.youtube.com/watch?v=XJE9QAUwcos" rel="noopener"><div class="overlay video-overlay" data-label="Watch trailer"><i class="fa fa-play"></i></div>
+<img src="images/persevera-game-conceptart.jpg" data-src="images/persevera-game-conceptart.jpg" class="img-fluid b-lazy" alt="video thumbnail"></a></div>
+<div class="col-lg-12 col-xl-7 game-card-right">
+<div class="project-card-header">
+<h2>PERSEVERA PT</h2>
+<span class="project-status-badge"><span class="status-dot"></span>Showcase Available</span>
+</div>
+<div class="badge-row" aria-label="Project tags">
+<span class="soulven-badge">Psychological Thriller</span><span class="soulven-badge">Prototype</span><span class="soulven-badge">PC</span>
+</div>
+<p class="game-description">PERSEVERA is a psychological thriller prototype set around a disturbing relationship between obsession, control and a life purpose forced onto someone else. The showcase invites players into the remnants of a former research facility, where atmosphere and environmental storytelling reveal the consequences of a mother’s fanatical vision.</p>
+<div class="action-row">
+<a class="soulven-cta primary" target="_blank" rel="noopener" href="https://store.steampowered.com/app/2567070/PERSEVERA/?utm_source=website&amp;utm_medium=button&amp;utm_campaign=persevera_homepage"><i class="fa fa-steam"></i>
                                 Play the Showcase
-                            </a>
-                            <a class="soulven-cta ghost" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=XJE9QAUwcos">
-                                <i class="fa fa-youtube-play"></i>
+                            </a><a class="soulven-cta ghost" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=XJE9QAUwcos"><i class="fa fa-youtube-play"></i>
                                 Watch Trailer
                             </a>
-                        </div>
-                    </div>
-                </div><!-- Game Card End -->                  
-                <!-- Game Card Video -->
-                <div class="row game-card project-card pc">
-                    <div class="col-lg-12 col-xl-5 game-card-left">
-                        <a target="_blank" title="External Link to Youtube" href="https://youtu.be/GZZ6ZJlxIYA"> <!-- Video link goes here -->
-                            <div class="overlay video-overlay" data-label="Watch trailer">
-                                <i class="fa fa-play"></i>
-                            </div>
-                            <img src="images/absinth-gameplay.jpg" data-src="images/absinth-gameplay.jpg" class="img-fluid b-lazy" alt="video thumbnail"> <!-- Video Thumbnail Img -->
-                        </a>
-                    </div>
-                    <div class="col-lg-12 col-xl-7 game-card-right">
-                        <div class="project-card-header">
-                            <h2><img height="50" src="./images/absinth-gameicon.jpg" alt="Absinth icon"> ABSINTH: Episode 1</h2>
-                            <span class="project-status-badge"><span class="status-dot"></span>Available</span>
-                        </div>
-                        <div class="badge-row" aria-label="Project tags">
-                            <span class="soulven-badge">Horror Adventure</span>
-                            <span class="soulven-badge">Released 2018</span>
-                            <span class="soulven-badge">PC</span>
-                        </div>
-                        <p class="game-description">A psychological first-person horror adventure set in California, blurring the line between game and reality. Players confront the events that changed Zane Zaminsky’s life and uncover a disturbing story through exploration, tension and atmosphere.</p>
-                        <div class="action-row">
-                            <a class="soulven-cta primary" target="_blank" rel="noopener" href="https://store.steampowered.com/app/884990/Absinth/?utm_source=website&utm_medium=button&utm_campaign=absinth_homepage">
-                                <i class="fa fa-steam"></i>
+</div>
+</div>
+</div>
+<div class="row game-card project-card pc">
+<div class="col-lg-12 col-xl-5 game-card-left"><a target="_blank" title="External Link to Youtube" href="https://youtu.be/GZZ6ZJlxIYA" rel="noopener"><div class="overlay video-overlay" data-label="Watch trailer"><i class="fa fa-play"></i></div>
+<img src="images/absinth-gameplay.jpg" data-src="images/absinth-gameplay.jpg" class="img-fluid b-lazy" alt="video thumbnail"></a></div>
+<div class="col-lg-12 col-xl-7 game-card-right">
+<div class="project-card-header">
+<h2>
+<img height="50" src="./images/absinth-gameicon.jpg" alt="Absinth icon"> ABSINTH: Episode 1</h2>
+<span class="project-status-badge"><span class="status-dot"></span>Available</span>
+</div>
+<div class="badge-row" aria-label="Project tags">
+<span class="soulven-badge">Horror Adventure</span><span class="soulven-badge">Released 2018</span><span class="soulven-badge">PC</span>
+</div>
+<p class="game-description">A psychological first-person horror adventure set in California, blurring the line between game and reality. Players confront the events that changed Zane Zaminsky’s life and uncover a disturbing story through exploration, tension and atmosphere.</p>
+<div class="action-row">
+<a class="soulven-cta primary" target="_blank" rel="noopener" href="https://store.steampowered.com/app/884990/Absinth/?utm_source=website&amp;utm_medium=button&amp;utm_campaign=absinth_homepage"><i class="fa fa-steam"></i>
                                 View on Steam
-                            </a>
-                            <a class="soulven-cta ghost" target="_blank" rel="noopener" href="https://youtu.be/GZZ6ZJlxIYA">
-                                <i class="fa fa-youtube-play"></i>
+                            </a><a class="soulven-cta ghost" target="_blank" rel="noopener" href="https://youtu.be/GZZ6ZJlxIYA"><i class="fa fa-youtube-play"></i>
                                 Watch Trailer
                             </a>
-                        </div>
-                    </div>
-                </div><!-- Game Card End -->
-                
-                <!-- Game Card 
-                <div class="row game-card mobile">
-                    <div class="col-lg-12 col-xl-5 game-card-left">
-                        <a href="images/theevilvr-gameplay/the-evil-vr-gameplay1.jpg" data-lightbox="screenshots_aurora">
-                            <div class="overlay">
-                                <i class="fa fa-picture-o fa-3x"></i>
-                            </div>
-                            <picture>
-                                <source media="(min-width: 1200px)" srcset="images/the-evil-vr-gameplay6.jpg">
-                                <source media="(min-width: 768px)" srcset="images/the-evil-vr-gameplay6.jpg">
-                                <img src="images/theevilvr_horror_house_promotionalbanner.jpg" data-src="images/theevilvr_horror_house_promotionalbanner.jpg" class="img-fluid b-lazy" alt="aurora image">
-                            </picture>
-                        </a>
-                        <a href="images/theevilvr-gameplay/the-evil-vr-gameplay2.jpg" data-lightbox="screenshots_aurora"></a>
-                        <a href="images/theevilvr-gameplay/the-evil-vr-gameplay3.jpg" data-lightbox="screenshots_aurora"></a>
-                        <a href="images/theevilvr-gameplay/the-evil-vr-gameplay4.jpg" data-lightbox="screenshots_aurora"></a>
-                        <a href="images/theevilvr-gameplay/the-evil-vr-gameplay5.jpg" data-lightbox="screenshots_aurora"></a>
-                    </div>
-                    <div class="col-lg-12 col-xl-7 game-card-right">
-                        <h2 class="short-hr-left"><img height="50" src="./images/TheEvilVR-Icon.jpg"/>&nbsp;&nbsp;THE EVIL VR</h2>
-                        <p class="tags"><span class="subtle">HORROR | GEAR VR & Google Daydream | Release year: 2016 | <div class="offline-status"></div> plattforms deprecated</span></p>
-                        <p class="game-description">August 25th, 1967. Jessica Müller never found out what happened to her family in Germany when she was a child. She became an orphan very young and has been adopted by an american family which turned back to the US in 1955. Jessica was to that time 11 years old. She never forgot the dramatic pictures of her childhood.</p>
-                    </div>
-                </div>
-                -->
-            </div>
-        </div>
-        <!-- /// ABOUT SECTION /// -->
-        <div id="about" class="large-margin">
-            <a href="about"></a><!-- Nav Anchor -->
-            <div class="row heading tiny-margin">
-                <div class="col-md-auto">
-                    <h1 class="animation-element slide-down">ABOUT <span class="colored">US</span></h1>
-                </div>
-                <div class="col">
-                    <hr class="animation-element extend">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <span class="section-kicker">About Soulven</span>
-                    <h3 class="colored">An independent studio for meaningful interactive products.</h3>
-                    <p>Soulven is based in Frankfurt am Main, Germany. We are a focused team of developers, artists and technical designers working across games, real-time 3D and software development.</p>
-                    <p>Our own games shape the standards we bring into every project: clear direction, strong atmosphere, responsible technology choices and a high level of craft. Alongside our original IPs, we selectively support organizations that need reliable full-stack development, applied 3D systems, simulations, training environments or technical project leadership.</p>
-                    <p>The name Soulven reflects our belief that the strongest products are built where human meaning meets invention. We value small senior teams, honest collaboration and long-term thinking over short-term production volume.</p>
-                    <div class="about-pillars">
-                        <div class="about-pillar"><strong>Soul-Driven</strong><span>We build around emotion, purpose and the people who will experience the final product.</span></div>
-                        <div class="about-pillar"><strong>Invention-Led</strong><span>We use modern technology deliberately, with a focus on maintainability, scalability and impact.</span></div>
-                        <div class="about-pillar"><strong>Game-Minded</strong><span>We bring atmosphere, interactivity and player-focused thinking into our games and client work.</span></div>
-                        <div class="about-pillar"><strong>Built to Last</strong><span>We prefer clear architecture, sustainable decisions and partnerships with real long-term value.</span></div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <img id="support-image" src="images/official-soulven-banner.jpg" data-src="images/official-soulven-banner.png" class="img-fluid b-lazy" alt="Soulven studio banner"><br><br>
-                    <p class="colored" style="text-align: center;">“Where ideas become worlds that truly matter.”</p>
-                    <div class="trust-strip">
-                        <div class="trust-item"><strong>Games</strong><span>Original IPs for PC with a focus on atmosphere, story and exploration.</span></div>
-                        <div class="trust-item"><strong>Real-Time 3D</strong><span>Interactive environments, simulations and applied visualization.</span></div>
-                        <div class="trust-item"><strong>Software</strong><span>Full-stack development and project leadership for digital products.</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /// CAREERS SECTION /// -->
-        <div id="careers" class='large-margin'>
-            <a href="careers"></a><!-- Nav Anchor -->
-            <div class="row heading tiny-margin">
-                <div class="col-md-auto">
-                    <h1 class="animation-element slide-down">WE'RE <span class="colored">HIRING</span></h1>
-                </div>
-                <div class="col">
-                    <hr class="animation-element extend">
-                </div>
-            </div>
-            <div class="careers-intro-panel">
-                <span class="section-kicker">Careers & Internships</span>
-                <h2>Build meaningful interactive products with us.</h2>
-                <p>We look for people with ownership, strong craft and a clear reason for wanting to build at Soulven. You do not see a role that fits your profile? Send a meaningful unsolicited application to <script>var1="hello",var2="@",var3="soulven.com",document.write(var1+var2+var3);</script>.</p>
-            </div>
-            <div class="row medium-margin careers-card-row">
-                <div class="col-md-6">
-                    <div class="job-card modern-job-card">
-                        <div class="job-card-topline">
-                            <span class="soulven-badge">Open Role</span>
-                            <span class="soulven-badge muted">Experienced</span>
-                        </div>
-                        <h3>Full-Stack Software & Game Developer</h3>
-                        <p>For developers with industrial experience who can move confidently between web products, software architecture and game-adjacent systems.</p>
-                        <div class="badge-row compact" aria-label="Role skills">
-                            <span class="soulven-badge">React / Angular</span>
-                            <span class="soulven-badge">TypeScript</span>
-                            <span class="soulven-badge">C# .NET</span>
-                            <span class="soulven-badge">Unity / Unreal Plus</span>
-                        </div>
-                        <button class="soulven-cta primary button-reset" data-toggle="modal" data-target="#modal1">View Details</button>
-                    </div>
-                    <!-- Modal -->
-                    <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="lead-programmer" aria-hidden="true">
-                        <div class="modal-dialog modal-lg" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h2 class="modal-title colored" id="lead-programmer">Full-Stack Software & Game Developer</h2>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <h3>THE IDEAL CANDIDATE:</h3>
-                                     <ul class="skill-list">
-                                        <li>React or Angular</li>
-                                        <li>TypeScript</li>
-                                        <li>C# .NET</li>
-                                        <li>Unity or Unreal Engine experience is a plus</li>
-                                    </ul>
-                                    <br>
-                                    <h3>REQUIREMENTS:</h3>
-                                    <ul>
-                                        <li>Education in Science and/or Mathematics or a related field</li>
-                                        <li>Strong analytical understanding of programming languages, frameworks, and tools</li>
-                                        <li>Excellent problem-solving skills</li>
-                                        <li>Experience with at least two AI tools</li>
-                                        <li>Strong communication and organizational skills</li>
-                                        <li>High level of self-responsibility within a team</li>
-                                        <li>Proficient with React or AngularJS and TypeScript</li>
-                                        <li>Proficient with C# .NET and object-oriented programming</li>
-                                        <li>Development experience in any industry</li>
-                                        <li>Agile mindset</li>
-                                        <li>Willingness to travel or relocate when necessary</li>
-                                        <li>Willingness to work also for our clients and also on industrial projects than only games</li>
-                                        <li>Ability to perform well under pressure and manage multiple tasks across projects</li>
-                                        <li>Passion for creating excellent web or native applications</li>
-                                        <li>You truly love the direction you've chosen in your career, and this is the number one reason why you do it.</li>
-                                        <li>You also do things in your free time to expand your skills.</li>
-                                        <li>Having a high absenteeism rate at school or work does not define your past.</li>
-                                        <li>Please provide contact information or a recommendation letter for at least your last two jobs so we can validate the experience listed on your CV.</li>
-                                        <li>Tell us why we should choose you over other candidates. Why do you believe you deserve to be part of Soulven?</li>
-                                    </ul>
-                                    <br>
-                                    <h3>APPLICATION PROCESS</h3>
-                                    <ul>
-                                        <li>Add following text to your mail subject: "WEBFORM:DEVELOPER"</li>
-                                        <li>An answer to your application can take up to 6 weeks.</li>
-                                        <li>Please note that we reserve the right to immediately discard applications that are not sufficiently informative without a response.</li>
-                                        <li>A complete application includes a CV, portfolio, and a cover letter that strongly addresses the above points.</li>
-                                    </ul>
-                                    <br><br>
-                                    <h3>HOW TO APPLY:</h3>
-                                    <p>If you think you have what it takes to join our team, then apply with a meaningful curriculum vitae that also addresses the above questions, along with your portfolio, to <u><script>var1="hello",var2="@",var3="soulven.com",document.write(var1+var2+var3);</script></u></p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="button secondary" data-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-6">
-                    <div class="job-card modern-job-card">
-                        <div class="job-card-topline">
-                            <span class="soulven-badge">Internship</span>
-                            <span class="soulven-badge muted">Students & Early Talent</span>
-                        </div>
-                        <h3>Internship in Games, 3D or Software</h3>
-                        <p>For students and early talents with a focused portfolio, clear motivation and a strong desire to learn inside real projects.</p>
-                        <div class="badge-row compact" aria-label="Internship areas">
-                            <span class="soulven-badge">Game Engines</span>
-                            <span class="soulven-badge">3D Art</span>
-                            <span class="soulven-badge">Frontend</span>
-                            <span class="soulven-badge">C# / C++</span>
-                        </div>
-                        <button class="soulven-cta primary button-reset" data-toggle="modal" data-target="#modal3">View Details</button>
-                    </div>
-                    <!-- Modal -->
-                    <div class="modal fade " id="modal3" tabindex="-1" role="dialog" aria-labelledby="level-designer" aria-hidden="true">
-                        <div class="modal-dialog modal-lg" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h2 class="modal-title colored" id="level-designer">Internship // Games, 3D or Software</h2>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <h3>THE IDEAL CANDIDATE:</h3>
-                                    <ul class="skill-list">
-                                        <li>Proficiency in Jira & Confluence</li>
-                                        <li>Basic development experience in React or Angular (for Developers)</li>
-                                        <li>Basic development experience in C# or C++ (for Developers)</li>
-                                        <li>Experience with Unity or Unreal Engine (for All)</li>
-                                        <li>Experience with Maya, Blender, or 3ds Max (for Artists)</li>
-                                        <li>Skills in 3D Modeling and Animation (for Artists)</li>
-                                        <li>Skills in 2D Art and UI Design (for Artists)</li>
-                                    </ul>
-                                    <br>
-                                    <h3>REQUIREMENTS:</h3>
-                                    <ul>
-                                        <li>You are studying Games, IT, Animation, or a related field and are looking for a <u>minimum</u> 3-months (full-time) or 6-months (part-time) internship.</li>
-                                        <li>You are willed to pass a small individual aptitude test to show us your skills.</li>
-                                        <li>You know exactly in which area you want to work right after your studies, and this is the same area you are applying for with us.</li>
-                                        <li>You have a strong passion for games and are proficient with at least one game engine (Unity or Unreal Engine).</li>
-                                        <li>You do not shy away from stepping out of your comfort zone to try new things and learn continuously</li>
-                                        <li>You leared how to present your work live to other people.</li>
-                                        <li>You are a team player and are open to receiving and giving constructive criticism.</li>
-                                        <li>You possess excellent problem-solving skills and can think analytically and creatively about challenges.</li>
-                                        <li>You have strong communication and organizational skills, essential for working effectively within a team.</li>
-                                        <li>You exhibit a high level of self-responsibility and ownership over your work and commitments and go the extra mile when you are not going to meet your own set targets.</li>
-                                        <li>You have an agile mindset and can adapt to iterative development processes.</li>
-                                        <li>You are willing to travel or relocate if necessary.</li>
-                                        <li>You perform well under pressure and can handle multiple tasks across different projects.</li>
-                                        <li>You truly love the direction you've chosen in your career, and this is the number one reason why you want to do it.</li>
-                                        <li>You also do things in your free time to expand your skills.</li>
-                                        <li>Having a high absenteeism rate at school or work does not define your past.</li>
-                                        <li>You have a passion for creating outstanding visual experiences, whether through web, native applications, or games.</li>
-                                        <li>Tell us why we should choose you over other candidates. Why do you believe you deserve to be part of Soulven Games?</li>
-                                    </ul>
-                                    <br>
-                                    <h3>APPLICATION PROCESS</h3>
-                                    <ul>
-                                        <li>For voluntary internships add following text to your mail subject: "WEBFORM:INTERN:VOL"</li>
-                                        <li>For mandatory internships as part of an education: "WEBFORM:INTERN:MAN"</li>
-                                        <li>An answer to your application can take up to 6 weeks.</li>
-                                        <li>Please note that we reserve the right to immediately discard applications that are not sufficiently informative without a response.</li>
-                                        <li>A complete application includes a CV, portfolio, and a cover letter that strongly addresses the above points.</li>
-                                    </ul>
-                                    <br><br>
-                                    <h3>HOW TO APPLY:</h3>
-                                    <p>If you think you have what it takes to join our team, then apply with a meaningful curriculum vitae that also addresses the above questions, along with your portfolio, to <u><script>var1="hello",var2="@",var3="soulven.com",document.write(var1+var2+var3);</script></u></p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="button secondary" data-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /// CONTACT SECTION /// -->
-        <div id="contact" class="large-margin contact-section">
-            <a href="contact"></a><!-- Nav Anchor -->
-            <div class="row heading tiny-margin">
-                <div class="col-md-auto">
-                    <h1 class="animation-element slide-down">CONNECT WITH <span class="colored">SOULVEN</span></h1>
-                </div>
-                <div class="col">
-                    <hr class="animation-element extend">
-                </div>
-            </div>
-            <p class="section-intro contact-section-intro">For press, media, publishers, investors and business partners. Choose the path that fits your request best and we will get back to you with the right information.</p>
-
-            <div class="contact-panel-grid">
-                <article class="contact-panel contact-panel-press">
-                    <div class="contact-panel-icon" aria-hidden="true">
-                        <i class="fa fa-newspaper-o"></i>
-                    </div>
-                    <div class="contact-panel-content">
-                        <span class="section-kicker">Press & Media</span>
-                        <h2>Need assets or background information?</h2>
-                        <p>Request press kits, logos, screenshots, trailers or a short introduction to Soulven and our projects.</p>
-                        <ul class="contact-detail-list">
-                            <li>Press kits and logos</li>
-                            <li>Screenshots, trailers and project facts</li>
-                            <li>Background information for articles or features</li>
-                        </ul>
-                        <a class="contact-cta" target="_blank" href="mailto:hello@soulven.com?subject=Press%20information%20needed%20from%20Soulven&body=Type%20of%20Press%20Request%3A%20I%20need%20a%20PressKit%20for%20a%20project%20%2F%20I%20need%20general%20information%20%2F%20I%20need%20both%20%2F%20Other%0A%0AFor%20which%20of%20our%20projects%20would%20you%20like%20to%20get%20information%3F%20Absinth%20%2F%20PERSEVERA%20%2F%20My%20Dear%20Emma%20%2F%20Other%0A%0ADo%20you%20also%20need%20a%20general%20introduction%20to%20Soulven%20Games%3F%20Yes%2FNo%0A%0ADo%20you%20also%20need%20logos%20and%20banners%20from%20us%3F%20Yes%2FNo%0A%0AIn%20which%20format%20(file%20and%20resolution)%20do%20you%20prefer%20to%20receive%20logos%20and%20banners%3F%0A%0AYour%20Legal%20Name%3A%20%5BYOUR%20COMPANY%5D%0A%0AYour%20Address%20and%20Location%3A%20%5BADDRESS%5D%2C%20%5BCITY%5D%0A%0AWhat%20is%20your%20reason%20for%20requesting%20press%20content%3F%20Where%20will%20it%20be%20published%3F%0A%0AYour%20Answer%3A">
-                            <i class="fa fa-envelope"></i>
-                            <span>Request press material</span>
-                        </a>
-                    </div>
-                </article>
-
-                <article class="contact-panel contact-panel-business">
-                    <div class="contact-panel-icon" aria-hidden="true">
-                        <i class="fa fa-handshake-o"></i>
-                    </div>
-                    <div class="contact-panel-content">
-                        <span class="section-kicker">Business & Partners</span>
-                        <h2>Want to build, publish or collaborate?</h2>
-                        <p>Contact us for publishing, investment, co-production, real-time 3D, software development or project leadership inquiries.</p>
-                        <ul class="contact-detail-list">
-                            <li>Publishing, investment and co-production</li>
-                            <li>Game development and real-time 3D applications</li>
-                            <li>Full-stack software engineering and project leadership</li>
-                        </ul>
-                        <a class="contact-cta contact-cta-secondary" target="_blank" href="mailto:hello@soulven.com?subject=Business%20%26%20partner%20inquiry%20for%20Soulven&body=Type%20of%20business%20request%3A%20%5BInvestment%5D%20%2F%20%5BPublishing%5D%20%2F%20%5BCo-production%5D%20%2F%20%5BSoftware%20Development%5D%20%2F%20%5BReal-Time%203D%5D%20%2F%20%5BOther%5D%0A%0AAre%20you%20interested%20in%20one%20of%20our%20projects%3F%20%5BYes%5D%2F%5BNo%5D%0AWhich%20project%20if%20yes%3A%20%5BPROJECT%20NAME%5D%0A%0AYour%20legal%20name%3A%20%5BYOUR%20COMPANY%5D%0A%0AYour%20address%20and%20location%3A%20%5BADDRESS%5D%2C%20%5BCITY%5D%0A%0AWhat%20are%20your%20expectations%20for%20connecting%20with%20us%3F%20How%20do%20you%20imagine%20collaborating%20with%20us%3F%0A%0AYour%20Answer%3A%20%5BANSWER%5D">
-                            <i class="fa fa-envelope"></i>
-                            <span>Start business inquiry</span>
-                        </a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </div><!-- Main Container End -->
-    <!-- /// FOOTER /// -->
-    <footer id="main-footer">
-        <div id="footer"> 
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <p id="copyright">&copy; Soulven GmbH <script>document.write(new Date().getFullYear());</script></p><!-- Copyright Text -->
-                        <ul class="social-links"> <!-- Social Media Icons -->
-                            <li><a href="./privacy.html">Privacy</a></li>
-                            <li><a href="./terms.html">Terms & Conditions</a></li>
-                            <li><a href="./imprint.html">Imprint</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div><!-- Container End -->
-        </div>
-    </footer><!-- Footer End -->
-    
-    <!-- //// SCRIPTS //// -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/blazy.min.js"></script>
-    <script src="js/morphext.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/lightbox.min.js"></script>
-    <script src="js/jquery-modal-video.min.js"></script>
-    <script src="js/validator.min.js"></script>
-    <script src="js/strider.js"></script>
-
-<!-- COOKIE CONSENTS (Banner + Consent Mode integration) -->
-<div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie Consent">
-  <p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="about" class="large-margin">
+<div class="row heading tiny-margin">
+<div class="col-md-auto"><h1 class="animation-element slide-down">ABOUT <span class="colored">US</span>
+</h1></div>
+<div class="col"><hr class="animation-element extend"></div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<span class="section-kicker">About Soulven</span><h3 class="colored">An independent studio for meaningful interactive products.</h3>
+<p>Soulven is based in Frankfurt am Main, Germany. We are a focused team of developers, artists and technical designers working across games, real-time 3D and software development.</p>
+<p>Our own games shape the standards we bring into every project: clear direction, strong atmosphere, responsible technology choices and a high level of craft. Alongside our original IPs, we selectively support organizations that need reliable full-stack development, applied 3D systems, simulations, training environments or technical project leadership.</p>
+<p>The name Soulven reflects our belief that the strongest products are built where human meaning meets invention. We value small senior teams, honest collaboration and long-term thinking over short-term production volume.</p>
+<div class="about-pillars">
+<div class="about-pillar">
+<strong>Soul-Driven</strong><span>We build around emotion, purpose and the people who will experience the final product.</span>
+</div>
+<div class="about-pillar">
+<strong>Invention-Led</strong><span>We use modern technology deliberately, with a focus on maintainability, scalability and impact.</span>
+</div>
+<div class="about-pillar">
+<strong>Game-Minded</strong><span>We bring atmosphere, interactivity and player-focused thinking into our games and client work.</span>
+</div>
+<div class="about-pillar">
+<strong>Built to Last</strong><span>We prefer clear architecture, sustainable decisions and partnerships with real long-term value.</span>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<img id="support-image" src="images/official-soulven-banner.jpg" data-src="images/official-soulven-banner.png" class="img-fluid b-lazy" alt="Soulven studio banner"><br><br><p class="colored" style="text-align: center;">“Where ideas become worlds that truly matter.”</p>
+<div class="trust-strip">
+<div class="trust-item">
+<strong>Games</strong><span>Original IPs for PC with a focus on atmosphere, story and exploration.</span>
+</div>
+<div class="trust-item">
+<strong>Real-Time 3D</strong><span>Interactive environments, simulations and applied visualization.</span>
+</div>
+<div class="trust-item">
+<strong>Software</strong><span>Full-stack development and project leadership for digital products.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="careers" class="large-margin">
+<div class="row heading tiny-margin">
+<div class="col-md-auto"><h1 class="animation-element slide-down">WE'RE <span class="colored">HIRING</span>
+</h1></div>
+<div class="col"><hr class="animation-element extend"></div>
+</div>
+<div class="careers-intro-panel">
+<span class="section-kicker">Careers &amp; Internships</span><h2>Build meaningful interactive products with us.</h2>
+<p>We look for people with ownership, strong craft and a clear reason for wanting to build at Soulven. You do not see a role that fits your profile? Send a meaningful unsolicited application to <script>var1="hello",var2="@",var3="soulven.com",document.write(var1+var2+var3);</script>.</p>
+</div>
+<div class="row medium-margin careers-card-row">
+<div class="col-md-6">
+<div class="job-card modern-job-card">
+<div class="job-card-topline">
+<span class="soulven-badge">Open Role</span><span class="soulven-badge muted">Experienced</span>
+</div>
+<h3>Full-Stack Software &amp; Game Developer</h3>
+<p>For developers with industrial experience who can move confidently between web products, software architecture and game-adjacent systems.</p>
+<div class="badge-row compact" aria-label="Role skills">
+<span class="soulven-badge">React / Angular</span><span class="soulven-badge">TypeScript</span><span class="soulven-badge">C# .NET</span><span class="soulven-badge">Unity / Unreal Plus</span>
+</div>
+<button class="soulven-cta primary button-reset" data-toggle="modal" data-target="#modal1">View Details</button>
+</div>
+<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="lead-programmer" aria-hidden="true"><div class="modal-dialog modal-lg" role="document"><div class="modal-content">
+<div class="modal-header">
+<h2 class="modal-title colored" id="lead-programmer">Full-Stack Software &amp; Game Developer</h2>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+</div>
+<div class="modal-body">
+<h3>THE IDEAL CANDIDATE:</h3>
+<ul class="skill-list">
+<li>React or Angular</li>
+<li>TypeScript</li>
+<li>C# .NET</li>
+<li>Unity or Unreal Engine experience is a plus</li>
+</ul>
+<br><h3>REQUIREMENTS:</h3>
+<ul>
+<li>Education in Science and/or Mathematics or a related field</li>
+<li>Strong analytical understanding of programming languages, frameworks, and tools</li>
+<li>Excellent problem-solving skills</li>
+<li>Experience with at least two AI tools</li>
+<li>Strong communication and organizational skills</li>
+<li>High level of self-responsibility within a team</li>
+<li>Proficient with React or AngularJS and TypeScript</li>
+<li>Proficient with C# .NET and object-oriented programming</li>
+<li>Development experience in any industry</li>
+<li>Agile mindset</li>
+<li>Willingness to travel or relocate when necessary</li>
+<li>Willingness to work also for our clients and also on industrial projects than only games</li>
+<li>Ability to perform well under pressure and manage multiple tasks across projects</li>
+<li>Passion for creating excellent web or native applications</li>
+<li>You truly love the direction you've chosen in your career, and this is the number one reason why you do it.</li>
+<li>You also do things in your free time to expand your skills.</li>
+<li>Having a high absenteeism rate at school or work does not define your past.</li>
+<li>Please provide contact information or a recommendation letter for at least your last two jobs so we can validate the experience listed on your CV.</li>
+<li>Tell us why we should choose you over other candidates. Why do you believe you deserve to be part of Soulven?</li>
+</ul>
+<br><h3>APPLICATION PROCESS</h3>
+<ul>
+<li>Add following text to your mail subject: "WEBFORM:DEVELOPER"</li>
+<li>An answer to your application can take up to 6 weeks.</li>
+<li>Please note that we reserve the right to immediately discard applications that are not sufficiently informative without a response.</li>
+<li>A complete application includes a CV, portfolio, and a cover letter that strongly addresses the above points.</li>
+</ul>
+<br><br><h3>HOW TO APPLY:</h3>
+<p>If you think you have what it takes to join our team, then apply with a meaningful curriculum vitae that also addresses the above questions, along with your portfolio, to <u><script>var1="hello",var2="@",var3="soulven.com",document.write(var1+var2+var3);</script></u></p>
+</div>
+<div class="modal-footer"><button type="button" class="button secondary" data-dismiss="modal">Close</button></div>
+</div></div></div>
+</div>
+<div class="col-md-6">
+<div class="job-card modern-job-card">
+<div class="job-card-topline">
+<span class="soulven-badge">Internship</span><span class="soulven-badge muted">Students &amp; Early Talent</span>
+</div>
+<h3>Internship in Games, 3D or Software</h3>
+<p>For students and early talents with a focused portfolio, clear motivation and a strong desire to learn inside real projects.</p>
+<div class="badge-row compact" aria-label="Internship areas">
+<span class="soulven-badge">Game Engines</span><span class="soulven-badge">3D Art</span><span class="soulven-badge">Frontend</span><span class="soulven-badge">C# / C++</span>
+</div>
+<button class="soulven-cta primary button-reset" data-toggle="modal" data-target="#modal3">View Details</button>
+</div>
+<div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="level-designer" aria-hidden="true"><div class="modal-dialog modal-lg" role="document"><div class="modal-content">
+<div class="modal-header">
+<h2 class="modal-title colored" id="level-designer">Internship // Games, 3D or Software</h2>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+</div>
+<div class="modal-body">
+<h3>THE IDEAL CANDIDATE:</h3>
+<ul class="skill-list">
+<li>Proficiency in Jira &amp; Confluence</li>
+<li>Basic development experience in React or Angular (for Developers)</li>
+<li>Basic development experience in C# or C++ (for Developers)</li>
+<li>Experience with Unity or Unreal Engine (for All)</li>
+<li>Experience with Maya, Blender, or 3ds Max (for Artists)</li>
+<li>Skills in 3D Modeling and Animation (for Artists)</li>
+<li>Skills in 2D Art and UI Design (for Artists)</li>
+</ul>
+<br><h3>REQUIREMENTS:</h3>
+<ul>
+<li>You are studying Games, IT, Animation, or a related field and are looking for a <u>minimum</u> 3-months (full-time) or 6-months (part-time) internship.</li>
+<li>You are willed to pass a small individual aptitude test to show us your skills.</li>
+<li>You know exactly in which area you want to work right after your studies, and this is the same area you are applying for with us.</li>
+<li>You have a strong passion for games and are proficient with at least one game engine (Unity or Unreal Engine).</li>
+<li>You do not shy away from stepping out of your comfort zone to try new things and learn continuously</li>
+<li>You leared how to present your work live to other people.</li>
+<li>You are a team player and are open to receiving and giving constructive criticism.</li>
+<li>You possess excellent problem-solving skills and can think analytically and creatively about challenges.</li>
+<li>You have strong communication and organizational skills, essential for working effectively within a team.</li>
+<li>You exhibit a high level of self-responsibility and ownership over your work and commitments and go the extra mile when you are not going to meet your own set targets.</li>
+<li>You have an agile mindset and can adapt to iterative development processes.</li>
+<li>You are willing to travel or relocate if necessary.</li>
+<li>You perform well under pressure and can handle multiple tasks across different projects.</li>
+<li>You truly love the direction you've chosen in your career, and this is the number one reason why you want to do it.</li>
+<li>You also do things in your free time to expand your skills.</li>
+<li>Having a high absenteeism rate at school or work does not define your past.</li>
+<li>You have a passion for creating outstanding visual experiences, whether through web, native applications, or games.</li>
+<li>Tell us why we should choose you over other candidates. Why do you believe you deserve to be part of Soulven Games?</li>
+</ul>
+<br><h3>APPLICATION PROCESS</h3>
+<ul>
+<li>For voluntary internships add following text to your mail subject: "WEBFORM:INTERN:VOL"</li>
+<li>For mandatory internships as part of an education: "WEBFORM:INTERN:MAN"</li>
+<li>An answer to your application can take up to 6 weeks.</li>
+<li>Please note that we reserve the right to immediately discard applications that are not sufficiently informative without a response.</li>
+<li>A complete application includes a CV, portfolio, and a cover letter that strongly addresses the above points.</li>
+</ul>
+<br><br><h3>HOW TO APPLY:</h3>
+<p>If you think you have what it takes to join our team, then apply with a meaningful curriculum vitae that also addresses the above questions, along with your portfolio, to <u><script>var1="hello",var2="@",var3="soulven.com",document.write(var1+var2+var3);</script></u></p>
+</div>
+<div class="modal-footer"><button type="button" class="button secondary" data-dismiss="modal">Close</button></div>
+</div></div></div>
+</div>
+</div>
+</div>
+<div id="contact" class="large-margin contact-section">
+<div class="row heading tiny-margin">
+<div class="col-md-auto"><h1 class="animation-element slide-down">CONNECT WITH <span class="colored">SOULVEN</span>
+</h1></div>
+<div class="col"><hr class="animation-element extend"></div>
+</div>
+<p class="section-intro contact-section-intro">For press, media, publishers, investors and business partners. Choose the path that fits your request best and we will get back to you with the right information.</p>
+<div class="contact-panel-grid">
+<article class="contact-panel contact-panel-press"><div class="contact-panel-icon" aria-hidden="true"><i class="fa fa-newspaper-o"></i></div>
+<div class="contact-panel-content">
+<span class="section-kicker">Press &amp; Media</span><h2>Need assets or background information?</h2>
+<p>Request press kits, logos, screenshots, trailers or a short introduction to Soulven and our projects.</p>
+<ul class="contact-detail-list">
+<li>Press kits and logos</li>
+<li>Screenshots, trailers and project facts</li>
+<li>Background information for articles or features</li>
+</ul>
+<a class="contact-cta" target="_blank" href="mailto:hello@soulven.com?subject=Press%20information%20needed%20from%20Soulven&amp;body=Type%20of%20Press%20Request%3A%20I%20need%20a%20PressKit%20for%20a%20project%20%2F%20I%20need%20general%20information%20%2F%20I%20need%20both%20%2F%20Other%0A%0AFor%20which%20of%20our%20projects%20would%20you%20like%20to%20get%20information%3F%20Absinth%20%2F%20PERSEVERA%20%2F%20My%20Dear%20Emma%20%2F%20Other%0A%0ADo%20you%20also%20need%20a%20general%20introduction%20to%20Soulven%20Games%3F%20Yes%2FNo%0A%0ADo%20you%20also%20need%20logos%20and%20banners%20from%20us%3F%20Yes%2FNo%0A%0AIn%20which%20format%20(file%20and%20resolution)%20do%20you%20prefer%20to%20receive%20logos%20and%20banners%3F%0A%0AYour%20Legal%20Name%3A%20%5BYOUR%20COMPANY%5D%0A%0AYour%20Address%20and%20Location%3A%20%5BADDRESS%5D%2C%20%5BCITY%5D%0A%0AWhat%20is%20your%20reason%20for%20requesting%20press%20content%3F%20Where%20will%20it%20be%20published%3F%0A%0AYour%20Answer%3A" rel="noopener"><i class="fa fa-envelope"></i><span>Request press material</span></a>
+</div></article><article class="contact-panel contact-panel-business"><div class="contact-panel-icon" aria-hidden="true"><i class="fa fa-handshake-o"></i></div>
+<div class="contact-panel-content">
+<span class="section-kicker">Business &amp; Partners</span><h2>Want to build, publish or collaborate?</h2>
+<p>Contact us for publishing, investment, co-production, real-time 3D, software development or project leadership inquiries.</p>
+<ul class="contact-detail-list">
+<li>Publishing, investment and co-production</li>
+<li>Game development and real-time 3D applications</li>
+<li>Full-stack software engineering and project leadership</li>
+</ul>
+<a class="contact-cta contact-cta-secondary" target="_blank" href="mailto:hello@soulven.com?subject=Business%20%26%20partner%20inquiry%20for%20Soulven&amp;body=Type%20of%20business%20request%3A%20%5BInvestment%5D%20%2F%20%5BPublishing%5D%20%2F%20%5BCo-production%5D%20%2F%20%5BSoftware%20Development%5D%20%2F%20%5BReal-Time%203D%5D%20%2F%20%5BOther%5D%0A%0AAre%20you%20interested%20in%20one%20of%20our%20projects%3F%20%5BYes%5D%2F%5BNo%5D%0AWhich%20project%20if%20yes%3A%20%5BPROJECT%20NAME%5D%0A%0AYour%20legal%20name%3A%20%5BYOUR%20COMPANY%5D%0A%0AYour%20address%20and%20location%3A%20%5BADDRESS%5D%2C%20%5BCITY%5D%0A%0AWhat%20are%20your%20expectations%20for%20connecting%20with%20us%3F%20How%20do%20you%20imagine%20collaborating%20with%20us%3F%0A%0AYour%20Answer%3A%20%5BANSWER%5D" rel="noopener"><i class="fa fa-envelope"></i><span>Start business inquiry</span></a>
+</div></article>
+</div>
+</div>
+</div>
+<footer id="main-footer"><div id="footer"><div class="container"><div class="row"><div class="col-md-12">
+<p id="copyright">© Soulven GmbH <script>document.write(new Date().getFullYear());</script></p>
+<ul class="social-links">
+<li><a href="./privacy.html">Privacy</a></li>
+<li><a href="./terms.html">Terms &amp; Conditions</a></li>
+<li><a href="./imprint.html">Imprint</a></li>
+</ul>
+</div></div></div></div></footer><script src="js/jquery-3.2.1.min.js"></script><script src="js/popper.min.js"></script><script src="js/bootstrap.min.js"></script><script src="js/blazy.min.js"></script><script src="js/morphext.min.js"></script><script src="js/isotope.pkgd.min.js"></script><script src="js/lightbox.min.js"></script><script src="js/jquery-modal-video.min.js"></script><script src="js/validator.min.js"></script><script src="js/strider.js"></script><div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie Consent">
+<p>
     By allowing cookies, you help us understand how players find and wishlist our products on Steam. This insight supports us in building better content and experiences for the community.
     You can read more in our <a class="cookie-link" href="./privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.
   </p>
-  <div class="cookie-actions">
-    <button id="cookie-decline" class="cookie-btn cookie-decline" aria-label="Decline">Decline</button>
-    <button id="cookie-accept" class="cookie-btn cookie-accept" aria-label="Accept all">Accept</button>
-  </div>
+<div class="cookie-actions">
+<button id="cookie-decline" class="cookie-btn cookie-decline" aria-label="Decline">Decline</button><button id="cookie-accept" class="cookie-btn cookie-accept" aria-label="Accept all">Accept</button>
 </div>
-
+</div>
 <script>
   // === Config: Deine GTM-ID hier eintragen ===
   const GTM_ID = "GTM-WWQHNJD9";
@@ -770,11 +476,7 @@
       // Do NOT save decline → user will be asked again on next visit or reload
     });
   });
-</script>
-<!-- END COOKIE CONSENTS -->
-
-<!-- COOKIE Banner & FOOTER OVERLAP FIX -->
-<script>
+</script><script>
 (function () {
   const footer    = document.getElementById('main-footer');
   const banner    = document.getElementById('cookie-banner');
@@ -831,13 +533,7 @@
   setTimeout(() => updateFooterOffset('safety-100ms'), 100);
   setTimeout(() => updateFooterOffset('safety-400ms'), 400);
 })();
-</script>
-<!-- COOKIE Banner & FOOTER OVERLAP FIX END -->
-
-
-
-<!-- MY DEAR EMMA RELEASE STATUS SWITCH -->
-<script>
+</script><script>
 (function () {
   // 7 June 2026, 23:00 Europe/Berlin time (CEST in June)
   const switchTime = new Date('2026-06-07T23:00:00+02:00').getTime();
@@ -853,7 +549,5 @@
   setInterval(updateMdeReleaseStatus, 60000);
 })();
 </script>
-<!-- MY DEAR EMMA RELEASE STATUS SWITCH END -->
-
 </body>
 </html>

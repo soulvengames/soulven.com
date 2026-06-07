@@ -933,7 +933,7 @@ a.pi-contact:hover {
 /* --------------------------- /////////// XI. 404 PAGE /////////// --------------------------- */
 #container-404 {
     position: absolute;
-    top: 0;
+    top: 45vh;
     left: 0;
     height: 100%;
     width: 100%;

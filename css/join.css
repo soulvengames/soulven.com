@@ -1,0 +1,223 @@
+/* ------------------------------------------------------------------
+   Soulven Join Landing Page
+   Append this block to css/style.css.
+------------------------------------------------------------------- */
+
+.join-page .navbar .nav-link {
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-size: .78rem;
+}
+
+.join-main {
+    padding-top: 120px;
+}
+
+.join-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 76px 0 70px;
+    margin-bottom: 4rem;
+    border-bottom: 1px solid rgba(58, 193, 172, .22);
+    background:
+        radial-gradient(circle at 12% 18%, rgba(58, 193, 172, .14), transparent 30%),
+        radial-gradient(circle at 88% 10%, rgba(255, 255, 255, .06), transparent 22%),
+        linear-gradient(135deg, rgba(10, 13, 24, .84), rgba(8, 8, 8, .1));
+}
+
+.join-hero h1 {
+    max-width: 780px;
+    margin-bottom: 22px;
+    font-size: 3rem;
+    line-height: 1.12;
+}
+
+.join-lead {
+    max-width: 700px;
+    color: rgba(255, 255, 255, .82);
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+.join-badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.join-highlight-card,
+.join-info-card,
+.join-contact-card {
+    border: 1px solid rgba(255, 255, 255, .09);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, .045);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, .28);
+}
+
+.join-highlight-card {
+    padding: 28px;
+}
+
+.join-card-label {
+    display: inline-flex;
+    margin-bottom: 14px;
+    color: #3AC1AC;
+    font-family: Soulven Secondary, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .16em;
+    font-size: .75rem;
+}
+
+.join-highlight-card h2,
+.join-info-card h2,
+.join-contact-card h2 {
+    color: #fff;
+}
+
+.join-highlight-card p,
+.join-info-card p,
+.join-contact-card p {
+    color: rgba(255, 255, 255, .76);
+    line-height: 1.7;
+}
+
+.join-cta-stack {
+    display: grid;
+    gap: 12px;
+    margin: 22px 0 14px;
+}
+
+.join-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 48px;
+    padding: 0 22px;
+    border-radius: 999px;
+    color: #fff !important;
+    font-family: Soulven Secondary, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+
+.join-cta:hover,
+.join-cta:focus {
+    color: #fff !important;
+    text-decoration: none;
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+}
+
+.join-cta-discord {
+    background: linear-gradient(135deg, #1677ff, #005bd7);
+    box-shadow: 0 12px 26px rgba(22, 119, 255, .25);
+}
+
+.join-cta-steam {
+    background: linear-gradient(to right, #75b022 5%, #588a1b 95%);
+    box-shadow: 0 12px 26px rgba(117, 176, 34, .23);
+}
+
+.join-microcopy {
+    color: rgba(255, 255, 255, .58) !important;
+    font-size: .86rem !important;
+}
+
+.join-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 6rem;
+}
+
+.join-info-card {
+    padding: 24px;
+}
+
+.join-info-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 18px;
+    border-radius: 16px;
+    color: #071016;
+    background: #3AC1AC;
+    box-shadow: 0 0 24px rgba(58, 193, 172, .24);
+}
+
+.join-contact-section {
+    margin-bottom: 10rem;
+}
+
+.join-contact-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, .9fr);
+    gap: 28px;
+    align-items: center;
+    padding: 28px;
+}
+
+.join-contact-list {
+    display: grid;
+    gap: 16px;
+    margin: 0;
+}
+
+.join-contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #fff;
+    font-family: Open Sans, sans-serif;
+}
+
+.join-contact-list i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+    color: #3AC1AC;
+    background: rgba(0, 0, 0, .24);
+}
+
+@media (max-width: 991px) {
+    .join-hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .join-highlight-card {
+        margin-top: 28px;
+    }
+
+    .join-info-grid,
+    .join-contact-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 575px) {
+    .join-main {
+        padding-top: 96px;
+    }
+
+    .join-hero {
+        padding: 52px 0;
+    }
+
+    .join-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .join-cta {
+        width: 100%;
+    }
+}
